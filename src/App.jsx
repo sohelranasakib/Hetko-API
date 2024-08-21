@@ -1,3 +1,7 @@
+import Banner from "./components/Banner"
+import Featured from "./components/Featured"
+import Header from "./components/Header"
+import Navber from "./components/Navber"
 
 
 function App() {
@@ -5,7 +9,11 @@ function App() {
 
   return (
     <>
-    <h2>hh</h2></>
+    <Header/>
+    <Navber/>
+    <Banner/>
+    <Featured/>
+    </>
   )
 }
 
