@@ -5,26 +5,28 @@ import logo from "../assets/logo.png"
 import { IoIosSearch } from "react-icons/io";
 import { RxCross2 } from "react-icons/rx";
 import { FaBars } from "react-icons/fa";
+import { Link } from 'react-router-dom';
+
 
 const Navber = () => {
     let [show, setShow] = useState(false)
     let berref = useRef()
-    
-    
 
-    useEffect(()=>{
-        document.addEventListener("click",(e)=>{
-            if(berref.current.contains(e.target) == true){
+
+
+    useEffect(() => {
+        document.addEventListener("click", (e) => {
+            if (berref.current.contains(e.target) == true) {
                 setShow(!show)
-            }else{
+            } else {
                 setShow(false)
             }
 
         })
 
-    },[show])
+    }, [show])
 
-    
+
 
 
     return (
@@ -40,12 +42,14 @@ const Navber = () => {
                     <div className="lg:w-[40%] w-[10%]">
                         <ul className={`lg:flex lg:flex-row flex flex-col z-50  gap-y-3 gap-x-10  pl-[20px] pt-[20px] lg:pt-0 font-sans text-[#767676] text-[18px] font-medium lg:static fixed duration-[800ms]  ${show == true ? "bg-[#262626] top-[0px] left-0 w-1/2 h-full py-2" : "top-[0px] left-[-250px] h-full"}`}>
                             <li className='text-white flex justify-between items-center lg:hidden'>Menu <RxCross2 className='mr-[20px]' /></li>
-                            <li className=' font-Sans font-semibold text-[16px] lg:text-[#0D0E43] text-white duration-300 ease-in-out hover:text-[#FB2E86] pt-1'>Home</li>
-                            <li className=' font-Sans font-semibold text-[16px] lg:text-[#0D0E43] text-white duration-300 ease-in-out hover:text-[#FB2E86] pt-1'>Pages</li>
-                            <li className=' font-Sans font-semibold text-[16px] lg:text-[#0D0E43] text-white duration-300 ease-in-out hover:text-[#FB2E86] pt-1'>Products</li>
-                            <li className=' font-Sans font-semibold text-[16px] lg:text-[#0D0E43] text-white duration-300 ease-in-out hover:text-[#FB2E86] pt-1'>Blog</li>
-                            <li className=' font-Sans font-semibold text-[16px] lg:text-[#0D0E43] text-white duration-300 ease-in-out hover:text-[#FB2E86] pt-1'>Shop</li>
-                            <li className=' font-Sans font-semibold text-[16px] lg:text-[#0D0E43] text-white duration-300 ease-in-out hover:text-[#FB2E86] pt-1'> Contact</li>
+                            <li><a className='font-Sans font-semibold text-[16px] lg:text-[#0D0E43] text-white duration-300 ease-in-out hover:text-[#FB2E86] pt-1' href="#">
+                                <Link to="/"> Home</Link></a></li>
+                            <li><a className='font-Sans font-semibold text-[16px] lg:text-[#0D0E43] text-white duration-300 ease-in-out hover:text-[#FB2E86] pt-1' href="#">Pages</a></li>
+                            <li><a className='font-Sans font-semibold text-[16px] lg:text-[#0D0E43] text-white duration-300 ease-in-out hover:text-[#FB2E86] pt-1' href="#"> 
+                                <Link to="/product"> Products</Link></a></li>
+                            <li><a className='font-Sans font-semibold text-[16px] lg:text-[#0D0E43] text-white duration-300 ease-in-out hover:text-[#FB2E86] pt-1' href="#"> Blog</a></li>
+                            <li><a className='font-Sans font-semibold text-[16px] lg:text-[#0D0E43] text-white duration-300 ease-in-out hover:text-[#FB2E86] pt-1' href="#">Shop</a></li>
+                            <li><a className='font-Sans font-semibold text-[16px] lg:text-[#0D0E43] text-white duration-300 ease-in-out hover:text-[#FB2E86] pt-1' href="#">Contact</a></li>
                         </ul>
                     </div>
 
@@ -60,7 +64,7 @@ const Navber = () => {
                   {show == true ? <RxCross2 /> : <FaBars />}
               </div>  */}
                     <div ref={berref} className=" lg:hidden pl-5 pr-5 ">
-                        <FaBars className=' text-[30px]'/>
+                        <FaBars className=' text-[30px]' />
                     </div>
 
                 </Flex>
