@@ -2,6 +2,7 @@ import React from 'react'
 import ban from "../assets/banner.png"
 import bann from "../assets/banner2.png"
 import Slider from "react-slick";
+import { Link } from 'react-router-dom';
 
 
 const Banner = () => {
@@ -44,7 +45,8 @@ const Banner = () => {
     };
 
     return (
-        <Slider  {...settings}>
+        <Link to="/product">
+          <Slider  {...settings}>
             <div className=" lg:pt-0 pt-[100px]">
             <div className="flex  ">
                 <div className="lg:w-[15%] w-[100%]">
@@ -145,6 +147,8 @@ const Banner = () => {
            
           
         </Slider>
+        </Link>
+      
     )
 }
 

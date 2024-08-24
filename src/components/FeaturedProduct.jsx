@@ -4,6 +4,7 @@ import Featured from './Featured'
 import { apiData } from './ContextApi'
 import Slider from "react-slick";
 import { FaChevronRight, FaChevronLeft } from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 
 
@@ -55,7 +56,9 @@ const FeaturedProduct = () => {
         
             <Slider {...settings}>
             {data.map((item)=>(
+               <Link to="/product">
                <Featured item={item}/>
+               </Link>
             ))}
            
             </Slider>
