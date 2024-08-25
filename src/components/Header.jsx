@@ -60,7 +60,7 @@ const Header = () => {
                             <li>
                                 <select name="" id="" className='bg-[#7E33E0] outline-none font-sans text-[16px] font-semibold text-[#F1F1F1]'>
                                     <option value="">English</option>
-                                    <option value="">Bangali</option>
+                                    <option value="">Bangla</option>
                                 </select>
                             </li>
                             <li>
