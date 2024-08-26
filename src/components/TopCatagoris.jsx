@@ -9,6 +9,7 @@ import mini1 from "../assets/mini1.png"
 import mini2 from "../assets/mini2.png"
 import mini01 from "../assets/mini01.png"
 import Slider from "react-slick";
+import { Link } from 'react-router-dom';
 
 
 const TopCatagoris = () => {
@@ -74,65 +75,67 @@ const TopCatagoris = () => {
                     <h3 className='font-Sans font-bold lg:text-[42px] text-[32px] text-[#0D0E43]'>Top Catagoris</h3>
                 </div>
 
-
-                <Slider  {...settings}>
-
-
-                    <div className="lg:w-[24%] w-full pt-[20px] pb-2 px-3  ">
-                        <div className=" bg-[#F6F7FB] py-[50px] lg:rounded-full">
-                            <img className='ml-[50%] translate-x-[-50%]' src={top} alt="" />
-                            <button className='py-[10px] px-[25px] bg-[#08D15F] ml-[50%] translate-x-[-50%] font-Sans font-bold text-[16px] text-[#fff] rounded-lg'>View Shop</button>
-                        </div>
-                        <div className=" relative text-center  px-[40px] bg-[#fff] mt-[20px]  ">
-
-                            <h3 className=' relative font-Sans font-bold text-[22px] text-[#0D0E43] '>Mini LCW chair</h3>
-                            <h4 className=' relative font-Sans font-bold text-[16px] text-[#1A0B5B] mt-[10px] '>$56.00</h4>
+               <Link to="/shoplist">
+               <Slider  {...settings}>
 
 
-                        </div>
-                    </div>
-                    <div className="lg:w-[24%] w-full pt-[20px] pb-2 px-3  ">
-                        <div className=" bg-[#F6F7FB] py-[50px] lg:rounded-full">
-                            <img className='ml-[50%] translate-x-[-50%]' src={top01} alt="" />
-                            <button className='py-[10px] px-[25px] bg-[#08D15F] ml-[50%] translate-x-[-50%] font-Sans font-bold text-[16px] text-[#fff] rounded-lg'>View Shop</button>
-                        </div>
-                        <div className=" relative text-center   px-[40px] bg-[#fff] mt-[20px]  ">
+<div className="lg:w-[24%] w-full pt-[20px] pb-2 px-3  ">
+    <div className=" bg-[#F6F7FB] py-[50px] lg:rounded-full">
+        <img className='ml-[50%] translate-x-[-50%]' src={top} alt="" />
+        <button className='py-[10px] px-[25px] bg-[#08D15F] ml-[50%] translate-x-[-50%] font-Sans font-bold text-[16px] text-[#fff] rounded-lg'>View Shop</button>
+    </div>
+    <div className=" relative text-center  px-[40px] bg-[#fff] mt-[20px]  ">
 
-                            <h3 className=' relative font-Sans font-bold text-[22px] text-[#0D0E43] '>Mini LCW chair</h3>
-                            <h4 className=' relative font-Sans font-bold text-[16px] text-[#1A0B5B] mt-[10px] '>$56.00</h4>
+        <h3 className=' relative font-Sans font-bold text-[22px] text-[#0D0E43] '>Mini LCW chair</h3>
+        <h4 className=' relative font-Sans font-bold text-[16px] text-[#1A0B5B] mt-[10px] '>$56.00</h4>
 
 
-                        </div>
-                    </div>
-                    <div className="lg:w-[24%] w-full pt-[20px] pb-2 px-3  ">
-                        <div className="bg-[#F6F7FB] py-[50px] lg:rounded-full">
-                            <img className='ml-[50%] translate-x-[-50%]' src={top02} alt="" />
-                            <button className='py-[10px] px-[25px] bg-[#08D15F] ml-[50%] translate-x-[-50%] font-Sans font-bold text-[16px] text-[#fff] rounded-lg'>View Shop</button>
-                        </div>
-                        <div className=" relative text-center  w-[100%] px-[40px] bg-[#fff] mt-[20px]  ">
+    </div>
+</div>
+<div className="lg:w-[24%] w-full pt-[20px] pb-2 px-3  ">
+    <div className=" bg-[#F6F7FB] py-[50px] lg:rounded-full">
+        <img className='ml-[50%] translate-x-[-50%]' src={top01} alt="" />
+        <button className='py-[10px] px-[25px] bg-[#08D15F] ml-[50%] translate-x-[-50%] font-Sans font-bold text-[16px] text-[#fff] rounded-lg'>View Shop</button>
+    </div>
+    <div className=" relative text-center   px-[40px] bg-[#fff] mt-[20px]  ">
 
-                            <h3 className=' relative font-Sans font-bold text-[22px] text-[#0D0E43] '>Mini LCW chair</h3>
-                            <h4 className=' relative font-Sans font-bold text-[16px] text-[#1A0B5B] mt-[10px] '>$56.00</h4>
-
-
-                        </div>
-                    </div>
-                    <div className="lg:w-[24%] w-full pt-[20px] pb-2 px-3  ">
-                        <div className="bg-[#F6F7FB] py-[50px] lg:rounded-full">
-                            <img className='ml-[50%] translate-x-[-50%]' src={top03} alt="" />
-                            <button className='py-[10px] px-[25px] bg-[#08D15F] ml-[50%] translate-x-[-50%] font-Sans font-bold text-[16px] text-[#fff] rounded-lg'>View Shop</button>
-                        </div>
-                        <div className=" relative text-center  w-[100%] px-[40px] bg-[#fff] mt-[20px]  ">
-
-                            <h3 className=' relative font-Sans font-bold text-[22px] text-[#0D0E43] '>Mini LCW chair</h3>
-                            <h4 className=' relative font-Sans font-bold text-[16px] text-[#1A0B5B] mt-[10px] '>$56.00</h4>
+        <h3 className=' relative font-Sans font-bold text-[22px] text-[#0D0E43] '>Mini LCW chair</h3>
+        <h4 className=' relative font-Sans font-bold text-[16px] text-[#1A0B5B] mt-[10px] '>$56.00</h4>
 
 
-                        </div>
-                    </div>
+    </div>
+</div>
+<div className="lg:w-[24%] w-full pt-[20px] pb-2 px-3  ">
+    <div className="bg-[#F6F7FB] py-[50px] lg:rounded-full">
+        <img className='ml-[50%] translate-x-[-50%]' src={top02} alt="" />
+        <button className='py-[10px] px-[25px] bg-[#08D15F] ml-[50%] translate-x-[-50%] font-Sans font-bold text-[16px] text-[#fff] rounded-lg'>View Shop</button>
+    </div>
+    <div className=" relative text-center  w-[100%] px-[40px] bg-[#fff] mt-[20px]  ">
 
-                </Slider>
+        <h3 className=' relative font-Sans font-bold text-[22px] text-[#0D0E43] '>Mini LCW chair</h3>
+        <h4 className=' relative font-Sans font-bold text-[16px] text-[#1A0B5B] mt-[10px] '>$56.00</h4>
 
+
+    </div>
+</div>
+<div className="lg:w-[24%] w-full pt-[20px] pb-2 px-3  ">
+    <div className="bg-[#F6F7FB] py-[50px] lg:rounded-full">
+        <img className='ml-[50%] translate-x-[-50%]' src={top03} alt="" />
+        <button className='py-[10px] px-[25px] bg-[#08D15F] ml-[50%] translate-x-[-50%] font-Sans font-bold text-[16px] text-[#fff] rounded-lg'>View Shop</button>
+    </div>
+    <div className=" relative text-center  w-[100%] px-[40px] bg-[#fff] mt-[20px]  ">
+
+        <h3 className=' relative font-Sans font-bold text-[22px] text-[#0D0E43] '>Mini LCW chair</h3>
+        <h4 className=' relative font-Sans font-bold text-[16px] text-[#1A0B5B] mt-[10px] '>$56.00</h4>
+
+
+    </div>
+</div>
+
+</Slider>
+
+               </Link>
+               
 
                 <div className=" lg:flex justify-between mt-[50px] px-3 py-10">
                     <div className="lg:w-[35%] w-full">
