@@ -44,12 +44,16 @@ const Navber = () => {
                             <li className='text-white flex justify-between items-center lg:hidden'>Menu <RxCross2 className='mr-[20px]' /></li>
                             <li><a className='font-Sans font-semibold text-[16px] lg:text-[#0D0E43] text-white duration-300 ease-in-out hover:text-[#FB2E86] pt-1' href="#">
                                 <Link to="/"> Home</Link></a></li>
-                            <li><a className='font-Sans font-semibold text-[16px] lg:text-[#0D0E43] text-white duration-300 ease-in-out hover:text-[#FB2E86] pt-1' href="#">Pages</a></li>
+                            <li><a className='font-Sans font-semibold text-[16px] lg:text-[#0D0E43] text-white duration-300 ease-in-out hover:text-[#FB2E86] pt-1' href="#">
+                                <Link to="/shoplist">Pages</Link></a></li>
                             <li><a className='font-Sans font-semibold text-[16px] lg:text-[#0D0E43] text-white duration-300 ease-in-out hover:text-[#FB2E86] pt-1' href="#"> 
                                 <Link to="/product"> Products</Link></a></li>
-                            <li><a className='font-Sans font-semibold text-[16px] lg:text-[#0D0E43] text-white duration-300 ease-in-out hover:text-[#FB2E86] pt-1' href="#"> Blog</a></li>
-                            <li><a className='font-Sans font-semibold text-[16px] lg:text-[#0D0E43] text-white duration-300 ease-in-out hover:text-[#FB2E86] pt-1' href="#">Shop</a></li>
-                            <li><a className='font-Sans font-semibold text-[16px] lg:text-[#0D0E43] text-white duration-300 ease-in-out hover:text-[#FB2E86] pt-1' href="#">Contact</a></li>
+                            <li><a className='font-Sans font-semibold text-[16px] lg:text-[#0D0E43] text-white duration-300 ease-in-out hover:text-[#FB2E86] pt-1' href="#"> 
+                                <Link to="/blog">Blog</Link></a></li>
+                            <li><a className='font-Sans font-semibold text-[16px] lg:text-[#0D0E43] text-white duration-300 ease-in-out hover:text-[#FB2E86] pt-1' href="#">
+                                <Link to="/shoplist">Shop</Link></a></li>
+                            <li><a className='font-Sans font-semibold text-[16px] lg:text-[#0D0E43] text-white duration-300 ease-in-out hover:text-[#FB2E86] pt-1' href="#">
+                                <Link to="/contuct">Contact</Link></a></li>
                         </ul>
                     </div>
 
