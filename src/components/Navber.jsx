@@ -45,7 +45,7 @@ const Navber = () => {
                             <li><a className='font-Sans font-semibold text-[16px] lg:text-[#0D0E43] text-white duration-300 ease-in-out hover:text-[#FB2E86] pt-1' href="#">
                                 <Link to="/"> Home</Link></a></li>
                             <li><a className='font-Sans font-semibold text-[16px] lg:text-[#0D0E43] text-white duration-300 ease-in-out hover:text-[#FB2E86] pt-1' href="#">
-                                <Link to="/shoplist">Pages</Link></a></li>
+                                <Link to="/pagesproduct">Pages</Link></a></li>
                             <li><a className='font-Sans font-semibold text-[16px] lg:text-[#0D0E43] text-white duration-300 ease-in-out hover:text-[#FB2E86] pt-1' href="#"> 
                                 <Link to="/product"> Products</Link></a></li>
                             <li><a className='font-Sans font-semibold text-[16px] lg:text-[#0D0E43] text-white duration-300 ease-in-out hover:text-[#FB2E86] pt-1' href="#"> 

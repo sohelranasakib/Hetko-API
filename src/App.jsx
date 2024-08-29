@@ -10,6 +10,8 @@ import Blog from "./pages/Blog"
 import ShopList from "./pages/ShopList"
 import Contucts from "./pages/Contucts"
 import Order from "./pages/Order"
+import PagesProduct from "./pages/PagesProduct"
+import Login from "./pages/Login"
 
 
 let router = createBrowserRouter(createRoutesFromElements(
@@ -23,6 +25,8 @@ let router = createBrowserRouter(createRoutesFromElements(
     <Route path="/shoplist" element={<ShopList/>}></Route>
     <Route path="/contuct" element={<Contucts/>}></Route>
     <Route path="/order" element={<Order/>}></Route>
+    <Route path="/pagesproduct" element={<PagesProduct/>}></Route>
+    <Route path="/login" element={<Login/>}></Route>
     <Route path="*" element={<Error/>}></Route>
   </Route>
 ))

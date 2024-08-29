@@ -10,6 +10,7 @@ import cart from "../assets/cart.png"
 import { RxCross2 } from "react-icons/rx";
 import { FaUser } from 'react-icons/fa';
 import { MdArrowDropDown } from 'react-icons/md';
+import { Link } from 'react-router-dom';
 
 
 
@@ -98,7 +99,7 @@ const Header = () => {
                                 </div>
                                 <div className=''>
                                     <h4 className='text-[rgba(255,255,255,0.7)] font-sans font-semibold text-[16px] duration-300 ease-in-out pl-3 hover:pl-6 hover:text-white'>
-                                        Log In
+                                        <Link to="/login">Log In</Link>
                                     </h4>
                                     <h4 className='text-[rgba(255,255,255,0.7)] font-sans font-semibold text-[16px] duration-300 ease-in-out pl-3 hover:pl-6 hover:text-white pt-2'>
                                          Sign Up

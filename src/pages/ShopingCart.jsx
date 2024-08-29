@@ -104,7 +104,7 @@ const ShopingCart = () => {
                     <div className="w-[30%] pl-[100px]">
                         <div className=" text-center">
                             <h3 className='font-Sans font-bold text-[20px] text-[#0D0E43]'>Cart Totals</h3>
-                            <div className="py-[20px] px-[20px] bg-[#F4F4FC] mt-[40px] rounded-md">
+                            <div className="py-[20px] px-[20px] bg-[#F4F4FC] mt-[10px] rounded-md">
                                 <div className=" mb-[30px] flex justify-between relative after:absolute after:contain-[''] after:bottom-[-10px] after:left-0 after:h-[1px] after:w-[100%] after:bg-[#C7CEE4]">
                                     <h3 className='font-Sans font-semibold text-[18px] text-[#262626]'>Total Quantity:</h3>
                                     <h3 className='font-Sans font-semibold text-[18px] text-[#262626]'>{totalQuantity}</h3>
@@ -128,7 +128,8 @@ const ShopingCart = () => {
                                 </div>
                             </div>
                         </div>
-                        <div className="  mt-[50px]">
+
+                        {/* <div className="  mt-[50px]">
                             <div className="text-center">
                                 <h3 className='font-Sans font-bold text-[20px] text-[#0D0E43]'>Cart Totals</h3>
                             </div>
@@ -147,7 +148,8 @@ const ShopingCart = () => {
                                 </div>
                             </div>
 
-                        </div>
+                        </div> */}
+
                     </div>
 
                     <ToastContainer

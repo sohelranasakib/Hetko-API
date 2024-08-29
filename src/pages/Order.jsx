@@ -28,7 +28,7 @@ const Order = () => {
                         <h3 className='  font-Sans font-bold text-[36px] text-[#0D0E43] mt-[20px] '>Your Order Is Completed! </h3>
                         
                         <p className='  font-Sans font-semibold text-[14px] text-[#0D0E43] mt-[20px] lg:w-[40%] w-full lg:ml-[50%] lg:translate-x-[-50%] '>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Non duis ultrices quam vel dui sollicitudin aliquet id arcu. Nam vitae a enim nunc, sed sapien egestas ac nam. Tristique ultrices dolor aliquam lacus volutpat praesent.</p>
-                        <button className='py-[10px] px-[30px] bg-[#FB2E86] mt-[50px] font-Sans font-bold text-[16px] text-[#fff] rounded-lg'>Continue Shopping</button>
+                        <button className='py-[10px] px-[30px] bg-[#FB2E86] mt-[50px] font-Sans font-bold text-[16px] text-[#fff] rounded-lg'>Please Payment</button>
                     </div>
                 </div>
                 <div className="flex justify-between">

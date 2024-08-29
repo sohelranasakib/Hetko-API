@@ -30,17 +30,17 @@ const ProductDetails = () => {
     }, [])
 
 
-    let clientRating = Array.from({length: 5}, (elm, index)=>{
+    let clientRating = Array.from({ length: 5 }, (elm, index) => {
         let ratingNumber = index + 0.5
-        return(
-            singleData.rating >= index+1 ? <FaStar />:  singleData.rating > ratingNumber ? <FaRegStarHalfStroke className=' text-[#FFD881]' /> :<FaRegStar />
+        return (
+            singleData.rating >= index + 1 ? <FaStar /> : singleData.rating > ratingNumber ? <FaRegStarHalfStroke className=' text-[#FFD881]' /> : <FaRegStar />
         )
     })
 
-    let handleAddToCart = (item)=>{
-        dispatch(addToCart({...item, qun: 1 }))
-       
-        
+    let handleAddToCart = (item) => {
+        dispatch(addToCart({ ...item, qun: 1 }))
+
+
     }
 
     return (
@@ -55,57 +55,51 @@ const ProductDetails = () => {
                     </div>
                 </Container>
             </div>
-            <Container>
-                <Flex>
-                <Flex className=" flex-wrap justify-between lg:pl-0 pl-5">
-                    {singleData?.images?.map((item) => (
-                        <div className="w-[45%] my-4">
-                            <img src={item} alt="Productd" />
+
+          <Container>
+          <div className=" py-[50px]">
+          <div className=" flex w-[100%] mb-[40px] gap-x-10">
+                        <div className=" ProdectImgBox flex gap-[10px] w-[50%]">
+
+                            <div className="miniimgbox w-[25%]">
+                                {singleData?.images?.map((item) => (
+                                    <img className=' mb-[8px] w-[100%] h-[125px] border-[1px] border-[#9e9e9e] rounded-[6px]' src={item} alt="" />
+                                ))}
+                            </div>
+                            <div className="bigimgbox w-[75%]">
+                                <img src={singleData.thumbnail} className='h-[391px] w-[100%] rounded-[6px]' alt="" />
+                            </div>
                         </div>
-                    ))}
 
-
-                </Flex>
-
-                    {/* <div className="w-[10%] pr-5">
-                        <img src={pro01} alt="" />
-                        <img className=' my-[20px]' src={pro01} alt="" />
-                        <img src={pro01} alt="" />
-                    </div>
-                    <div className=" w-[30%]">
-                        <div className="">
-                            <img src={pro001} alt="" />
-                        </div>
-                    </div> */}
-                    <div className=" w-[55%]">
-                        <div className="">
-                            <h2 className='font-Sans font-bold text-[36px] text-[#0D0E43]'>Playwood arm chair</h2>
+                        <div className="w-[50%]">
+                            <h2 className='font-Sans font-bold text-[36px] text-[#0D0E43]'>{singleData.title}</h2>
                             <div className="flex mt-[20px] gap-x-1 items-center text-[#FFC416] ">
-                               {clientRating}
-                                <h5 className='font-Sans font-semibold text-[18px] text-[#0D0E43]'>(22)</h5>
+                                {clientRating}
+                                {/* <h5 className='font-Sans font-semibold text-[18px] text-[#0D0E43]'>(22)</h5> */}
+                                <div className="">
+                                    <span className='text-[#767676] ml-[10px]  text-[14px]'>{singleData.rating}</span>
+                                </div>
                             </div>
                             <div className=" flex mt-[18px] gap-x-3">
-                                <h2 className=' font-Sans font-bold text-[16px] text-[#0D0E43]'>${singleData.price}</h2>
-                                {/* <h2 className=' font-Sans font-bold text-[16px] text-[#FB2E86]'>$32.00</h2> */}
+                                <h2 className=' font-Sans font-bold text-[16px] text-[#0D0E43]'>${singleData.price} <span className=' ml-[10px] text-[#1e7e3e]'>{singleData.discountPercentage}% <span className=''>Discount</span></span></h2>
+
                             </div>
                             <h2 className=' font-Sans font-bold text-[16px] text-[#FB2E86]'>Stock: {singleData.stock}</h2>
-                            <h3 className='font-Sans font-bold text-[18px] text-[#0D0E43] mt-[20px]'>Color</h3>
-                            <p className='font-Sans font-normal text-[18px] text-[#0D0E43] mt-[20px]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mauris tellus porttitor purus, et volutpat sit.</p>
-                            <Link to="/shopingcart" onClick={()=>handleAddToCart(singleData)}>
-                            <button className='py-[10px] px-[25px] bg-[#262626] mt-[50px] font-Sans font-bold text-[16px] text-[#fff] rounded-lg'>Add To cart</button>
+                            {/* <h3 className='font-Sans font-bold text-[18px] text-[#0D0E43] mt-[20px]'>Color</h3> */}
+                            <p className='font-Sans font-normal text-[18px] text-[#0D0E43] mt-[20px]'>{singleData.description}</p>
+                            <Link to="/shopingcart" onClick={() => handleAddToCart(singleData)}>
+                                <button className='py-[10px] px-[25px] bg-[#262626] mt-[20px] font-Sans font-bold text-[16px] text-[#fff] rounded-lg'>Add To cart</button>
                             </Link>
-                           
+
                             <h4 className='font-Sans font-bold text-[18px] text-[#0D0E43] mt-[20px]'>Categories: {singleData.category}</h4>
                             <h5 className='font-Sans font-bold text-[18px] text-[#0D0E43] mt-[20px]'>Tags: {singleData.tags}</h5>
                         </div>
+
                     </div>
 
-                </Flex>
-            </Container>
 
-            <div className=" bg-[#F9F8FE]">
-                <Container>
-                    <div className="py-[100px]">
+            {/* <div className=" bg-[#F9F8FE]">
+                    <div className=" px-10">
                         <div className="w-[60%]">
                             <ul className='lg:flex justify-between'>
                                 <li className=' relative font-Sans font-bold text-[24px] text-[#0D0E43] mt-[50px] after:absolute after:contain-[""] after:bottom-0 after:left-0 after:h-[2px] after:w-[130px] after:bg-[#0D0E43]'>Description</li>
@@ -139,8 +133,10 @@ const ProductDetails = () => {
                             </div>
                         </div>
                     </div>
-                </Container>
-            </div>
+                
+            </div> */}
+          </div>
+          </Container>
         </section>
     )
 }

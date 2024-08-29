@@ -5,7 +5,7 @@ import { GrSort } from "react-icons/gr";
 const ProductsBar = () => {
     return (
         <>
-            <div className="lg:flex mt-[20px] bg-[#fff] py-[50px] px-[40px]">
+            <div className="lg:flex mt-[10px] bg-[#fff] py-[30px] px-[40px]">
                 <div className="lg:w-[40%] w-full">
                     <h2 className='font-Sans font-bold text-[22px] text-[#0D0E43]'>Ecommerce Acceories & Fashion item </h2>
                     <h5 className='font-Sans font-semibold text-[16px] text-[#0D0E43]'>About 9,620 results (0.62 seconds)</h5>
