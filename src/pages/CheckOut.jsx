@@ -131,7 +131,7 @@ const CheckOut = () => {
                             <div className="mt-[30px]">
                             
                            <Link to="/order">
-                           <button className=' py-4 px-10 bg-[#19D16F] mt-[50px] font-Sans font-bold text-[16px] text-[#fff] rounded-lg hover:bg-black '>Proceed To Checkout</button>
+                           <button className=' py-4 px-10 bg-[#19D16F] mt-[50px] font-Sans font-bold text-[16px] text-[#fff] rounded-lg hover:bg-black '>Proceed To Order</button>
                            </Link>
                             
                             </div>
