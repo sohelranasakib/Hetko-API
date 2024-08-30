@@ -22,8 +22,8 @@ const Products = () => {
 
   let [currentPage, setCurrentPage] = useState(1)
   let [perPage, setPerPage] = useState(6)
-  let [brandshow, setBrandShow] = useState(false)
-  let [brand, setBrand] = useState([])
+  // let [brandshow, setBrandShow] = useState(false)
+  // let [brand, setBrand] = useState([])
   let [brandSearchFilter, setBrandSearchFilter] = useState([])
 
   let lastPage = currentPage * perPage
@@ -54,16 +54,16 @@ const Products = () => {
     }
   }
 
-  useEffect(() => {
-    setBrand([...new Set(data.map((item)=>item))])
-  })
+  // useEffect(() => {
+  //   setBrand([...new Set(data.map((item)=>item))])
+  // })
   
   
-  let handleBrand = (citem)=>{
-    let brandFilter = data.filter((item)=>item.brand == citem)
-    setBrandSearchFilter(brandFilter)
+  // let handleBrand = (citem)=>{
+  //   let brandFilter = data.filter((item)=>item.brand == citem)
+  //   setBrandSearchFilter(brandFilter)
     
-  }
+  // }
   
   
   return (
@@ -83,7 +83,7 @@ const Products = () => {
                         <ProductsBar/>
                    </div>
         <Flex>
-          <div className="w-[20%]">
+          {/* <div className="w-[20%]">
             <div className="">
               <h2 onClick={() => setBrandShow(!brandshow)} className=' relative font-Sans font-bold text-[22px] text-[#0D0E43] after:absolute after:contain-[""] after:bottom-0 after:left-0 after:h-[3px] after:w-[150px] after:bg-[#fff] hover:after:bg-black flex items-center gap-x-5'>Product Brand <p>{brandshow == true ? <FaCaretUp /> : <FaCaretDown />}</p></h2>
             </div>
@@ -100,8 +100,8 @@ const Products = () => {
                 </div>
               </div>
             }
-          </div>
-          <div className="w-[80%]">
+          </div> */}
+          <div className="w-[100%]">
             <div className=" flex justify-between flex-wrap">
               <Post allData={allData} brandSearchFilter={brandSearchFilter}/>
 

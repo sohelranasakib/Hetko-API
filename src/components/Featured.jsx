@@ -20,7 +20,7 @@ const Featured = ({item}) => {
           <div className=" lg:w-[100%] w-full p-[10px]">
             <div className=" relative  w-[100%] group hover:bg-[#2F1AC4] ">
               <img className="bg-[#F6F7FB] w-[100%]" src={item.thumbnail} alt="" />
-            <div className=' flex absolute top-5 left-5 opacity-[0] group-hover:top-5 duration-75 group-hover:opacity-[1] gap-x-2'>
+            <div className=' flex absolute top-[30px] left-5 opacity-[0] group-hover:top-[30px] duration-75 group-hover:opacity-[1] gap-x-2'>
                 <FaCartShopping />
                 <FaHeart />
                 <FaSearchPlus />

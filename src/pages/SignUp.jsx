@@ -85,7 +85,7 @@ const SignUp = () => {
                     <h3 className=' font-normal font-sans text-[#9096B2] text-[17px]'>I have read and agree to the Privacy Policy</h3>
                     </div>
                 <div className=" pt-[10px]">
-                <a className=' font-sans font-bold text-[20px] py-[10px] px-[30px] bg-[#262626] text-[#fff] inline-block rounded-lg' href="#"> Sign Up</a>
+                <a className=' font-sans font-bold text-[20px] py-[10px] px-[30px] bg-[#262626] text-[#fff] inline-block rounded-lg' href="#"> <Link to="/login">Sign Up</Link> </a>
                 </div>
                 </div>
             </Container>

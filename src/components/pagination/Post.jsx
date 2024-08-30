@@ -15,7 +15,7 @@ const Post = ({ allData, brandSearchFilter }) => {
         brandSearchFilter.map((item) => (
           <div className=" lg:w-[32%] p-[10px]">
             <Link to={`/product/${item.id}`}>
-              <div className=" relative  w-[96%] group hover:bg-[#2F1AC4] ">
+              <div className=" relative  w-[6%] group hover:bg-[#2F1AC4] ">
                 <img className="bg-[#F6F7FB] w-[100%]" src={item.thumbnail} alt="" />
                 <div className=' flex absolute top-5 left-5 opacity-[0] group-hover:top-5 duration-75 group-hover:opacity-[1] gap-x-2'>
                   <FaCartShopping />

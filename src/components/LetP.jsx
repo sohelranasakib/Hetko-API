@@ -19,11 +19,20 @@ let data = useContext(apiData)
               <Link to={`/product/${item.id}`}>
               <div className=" relative  w-[100%] group ">
                     <img className="bg-[#F6F7FB] w-[100%]" src={item.thumbnail} alt="" />
-                    <div className=' absolute bottom-[100px] left-5 opacity-[0] group-hover:bottom-[100px] duration-75 group-hover:opacity-[1] gap-y-3'>
+                    <div className=' absolute bottom-[100px] left-5 opacity-[0] group-hover:bottom-[180px] duration-75 group-hover:opacity-[1]'>
+                        <div className="">
                         <FaCartShopping />
+                        </div>
+                        <div className=" py-4">
                         <FaHeart />
+                        </div>
+                        <div className="">
                         <FaSearchPlus />
+                        </div>
                     </div>
+                    <div className=" absolute top-[30px] left-[20px] opacity-0 group-hover:opacity-[1] duration-75">
+                            <a className=' font-sans font-bold text-[18px] py-[5px] px-[25px] bg-[#262626] text-[#fff] rounded-lg inline-block ' href="#">Sale</a>
+                        </div>
                     <h3 className=" opacity-[0] group-hover:top-[240px] duration-75 group-hover:opacity-[1]  absolute top-[340px] left-[50%] translate-x-[-50%] h-[40px] w-[100px] flex justify-center items-center bg-[#08D15F] rounded-[5px] text-[#fff] text-[13px]">View Details</h3>
                     <div className=" flex justify-between">
                         <div className="">

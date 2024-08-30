@@ -3,6 +3,7 @@ import Container from './Container'
 import Flex from './Flex'
 import logo from "../assets/logo.png"
 import { FaFacebookSquare , FaTwitter,FaLinkedin} from "react-icons/fa";
+import { Link } from 'react-router-dom';
 
 
 
@@ -15,7 +16,7 @@ const Footer = () => {
              <img className='  ' src={logo} alt="" />
              <div className="flex  ">
               <input className='lg:w-[60%] w-[65%]  outline-none rounded-lg h-[40px] bg-[#D9D9D9] mt-[50px] pl-2' type="text" placeholder='Enter Email Address' />
-              <button className='py-[8px] px-[20px] bg-[#FB2E86] mt-[50px] font-Sans font-bold text-[16px] text-[#fff] rounded-lg'>Sign Up</button>
+              <button className='py-[8px] px-[20px] bg-[#FB2E86] mt-[50px] font-Sans font-bold text-[16px] text-[#fff] rounded-lg'><Link to="/signup">Sign Up</Link></button>
              </div>
              <h5 className='font-Sans font-bold text-[16px] text-[#0D0E43] mt-[40px]'>Contact Info</h5>
              <p className='font-Sans font-semibold text-[16px] text-[#0D0E43]'>17 Princess Road, London, Greater London NW1 8JR, UK</p>

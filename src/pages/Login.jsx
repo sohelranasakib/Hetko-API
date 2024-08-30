@@ -31,7 +31,7 @@ const Login = () => {
             <span className=' w-[28%] font-bold font-sans text-[#9096B2] text-[17px]  border-b-2 mb-[25px] border-[#d4cdcd] hover:text-[#262626] hover:border-[#262626]' >Forgot password?</span>
             </div>
             <div className="flex justify-center mb-5">
-              <a className=' font-sans font-bold text-[20px] py-[10px] w-[80%] bg-[#FB2E86] text-[#fff] text-center ' href="#">Sign In</a>
+              <a className=' font-sans font-bold text-[20px] py-[10px] w-[80%] bg-[#FB2E86] text-[#fff] text-center ' href="#"> <Link to="/account">Sign In</Link> </a>
             </div>
             <div className=" flex justify-center">
               <Link to="/signup">

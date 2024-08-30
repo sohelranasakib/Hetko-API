@@ -94,22 +94,17 @@ const Header = () => {
                 {useShow && 
                 <div className='absolute lg:top-[53px] top-[45px] z-50  lg:right-[180px] right-[30px] bg-[#262626] w-[200px] py-[10px]'>
                                 <div className='text-center'>
-                                    <h3 className='text-[rgba(255,255,255,0.7)] font-sans font-bold text-[16px] py-2 duration-300 ease-in-out pl-3 hover:pl-6 hover:text-white'>
-                                        My Account
+                                    <h3 className='text-[rgba(255,255,255,0.7)] font-sans font-bold text-[16px] py-2 hover:text-white'>
+                                        <Link to="/account">My Account</Link>
                                     </h3>
                                 </div>
                                 <div className=''>
-                                    <h4 className='text-[rgba(255,255,255,0.7)] font-sans font-semibold text-[16px] duration-300 ease-in-out pl-3 hover:pl-6 hover:text-white'>
+                                    <h4 className=' font-sans font-bold text-[20px] text-[#262626] py-[10px] px-[20px] bg-[#fff] text-center '>
                                         <Link to="/login">Log In</Link>
                                     </h4>
-                                    <h4 className='text-[rgba(255,255,255,0.7)] font-sans font-semibold text-[16px] duration-300 ease-in-out pl-3 hover:pl-6 hover:text-white pt-2'>
+                                    <h4 className=' font-sans font-semibold text-[16px]  text-[#fff]  py-[10px] px-[20px] text-center '>
                                        <Link to="/signup">Sign Up</Link> 
                                     </h4>
-                                    <div className=" text-center pt-3">
-                                        <h4 className='text-[rgba(255,255,255,0.7)] font-sans font-semibold text-[16px] duration-300 ease-in-out pl-3 hover:pl-6 hover:text-white'>
-                                            Log Out
-                                        </h4>
-                                    </div>
                                 </div>
                             </div>
                             }
