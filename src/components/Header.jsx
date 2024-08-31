@@ -11,11 +11,13 @@ import { RxCross2 } from "react-icons/rx";
 import { FaUser } from 'react-icons/fa';
 import { MdArrowDropDown } from 'react-icons/md';
 import { Link } from 'react-router-dom';
+import { useSelector } from 'react-redux';
 
 
 
 
 const Header = () => {
+    let data = useSelector((state)=>state.product.cartItem)
   
     let [cartShow, setCartShow] = useState(false)
     let [useShow, setUseShow] = useState(false)
@@ -23,7 +25,6 @@ const Header = () => {
     let useref = useRef()
     
     
-
     useEffect(()=>{
      document.addEventListener("click",(e)=>{
         if(cartref.current.contains(e.target) == true){
@@ -44,7 +45,7 @@ const Header = () => {
     },[cartShow, useShow])
 
     return (
-        <section className=' bg-[#7E33E0] py-[15px]'>
+        <section className=' bg-[#7E33E0] py-[25px]'>
             <Container>
                 <Flex>
                     <div className=" lg:flex w-[40%]">
@@ -85,8 +86,15 @@ const Header = () => {
                            <FaUser />
                            <MdArrowDropDown />
                            </div>
-                            <div ref={cartref} className=" relative">
+                            <div ref={cartref} className="relative ">
+                                <div className=" relative ">
                                 <FaShoppingCart className='text-[22px] text-[#F1F1F1]' />
+                                </div>
+                                {data.length > 0 ? <div className="absolute h-[20px] w-[20px] bg-[#262626] left-[20px] top-[-15px] rounded-full text-[#fff] text-center">
+                                      {data.length}
+                                </div> : "" }
+                             
+                                
                             </div>
                     </div>
 

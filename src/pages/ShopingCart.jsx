@@ -123,7 +123,7 @@ const ShopingCart = () => {
 
                                 </div>
                                 <div onClick={handleCheckOut} className="">
-                                    <button className='py-[10px] px-[60px] bg-[#19D16F] mt-[20px] font-Sans font-bold text-[16px] text-[#fff] rounded-lg hover:bg-black hover:text-[#fff]'>Proceed To Checkout</button>
+                                    <button className='py-[10px] px-[60px] bg-[#19D16F] mt-[20px] font-Sans font-bold text-[16px] text-[#fff] rounded-lg hover:bg-black hover:text-[#fff]'>Proceed To Cart</button>
 
                                 </div>
                             </div>
