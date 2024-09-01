@@ -23,7 +23,8 @@ const CheckOut = () => {
                                 <form className='' action=''>
                                     <div className=" flex justify-between items-center">
                                         <h3 className='font-Sans font-bold text-[24px] text-[#0D0E43]'>Contact Information</h3>
-                                        <h3 className='font-Sans font-bold text-[16px] text-[#0D0E43]'>Already have an account? <span>Log in</span></h3>
+                                        <h3 className='font-Sans font-bold text-[16px] text-[#0D0E43]  relative after:absolute after:bottom-[0px] after:left-0 after:h-[2px] after:w-[80%] after:bg-[#262626]  capitalize  '><Link to="/signup">Already have an account?</Link>  <span className='relative after:absolute after:bottom-[0px] after:left-0 after:h-[2px] after:w-[100%] after:bg-[#262626]  capitalize '><Link to="/login">login</Link></span></h3>
+                                        
                                     </div>
                                     <input className='w-full h-[50px] border-b-2 outline-none bg-[#f7f4f4]  mt-5 pl-3' type="Email" placeholder='Email or mobile phone number...' />
 

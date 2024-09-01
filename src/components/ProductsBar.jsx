@@ -28,7 +28,7 @@ const ProductsBar = () => {
                         <div className=" pl-[20px]">
                             <PiSquaresFourFill className=' h-[46px] w-[40px] border-[1px] border-[#737373] text-[35px]'/>
                         </div>
-                        <div className=" pl-3">
+                        <div  className=" pl-3">
                             <GrSort className=' h-[46px] w-[40px] border-[1px] border-[#737373] text-[35px]'/>
                         </div>
                     </div>

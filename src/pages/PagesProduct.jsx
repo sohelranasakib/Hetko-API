@@ -7,11 +7,14 @@ import { FaRegHeart, FaSearchPlus } from "react-icons/fa";
 import { FiShoppingCart } from "react-icons/fi";
 import { apiData } from '../components/ContextApi';
 import { FaCaretDown, FaCaretUp, FaStar  } from "react-icons/fa";
+import { useDispatch } from 'react-redux';
+import { addToCart } from '../components/slice/productSlice';
 
 
 const PagesProduct = () => {
     let data = useContext(apiData)
     let [brandSearchFilter, setBrandSearchFilter] = useState([])
+    let dispatch = useDispatch()
 
     let [brandshow, setBrandShow] = useState(false)
     let [discountshow, setDiscountShow] = useState(false)
@@ -71,6 +74,11 @@ const PagesProduct = () => {
     let handleRating = (citem) => {
         let ratingFilter = data.filter((item) => item.rating == citem)
         setBrandSearchFilter(ratingFilter)
+    }
+
+    let handleAddTCart = (item)=>{
+        dispatch(addToCart({...item, qun: 1}))
+        
     }
 
     return (
@@ -251,10 +259,12 @@ const PagesProduct = () => {
                                             </div>
                                             <h2 className=' font-Sans font-bold text-[16px] text-[#FB2E86]'>Stock: {item.stock}</h2>
                                             <p className='font-Sans font-semibold text-[16px] text-[#0D0E43] mt-[20px] lg:w-[80%]'>{item.description}</p>
-                                            <div className="flex my-[10px] gap-6">
+                                            <div className="flex my-[10px] text-[20px] gap-6">
                                                 <FiShoppingCart />
                                                 <FaRegHeart />
-                                                <FaSearchPlus />
+                                               <div onClick={()=>handleAddTCart(item)} className="">
+                                               <FaSearchPlus />
+                                               </div>
                                             </div>
                                             <Link to={`/product/${item.id}`}>
                                                 <button className='py-[10px] px-[25px] bg-[#262626] mt-[0px] font-Sans font-bold text-[16px] text-[#fff] rounded-lg'>Shop Now</button>
