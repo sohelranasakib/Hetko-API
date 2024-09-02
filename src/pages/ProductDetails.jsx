@@ -91,8 +91,8 @@ const ProductDetails = () => {
                                 <button className='py-[10px] px-[25px] bg-[#262626] mt-[20px] font-Sans font-bold text-[16px] text-[#fff] rounded-lg'>Add To cart</button>
                             </Link>
 
-                            <h4 className='font-Sans font-bold text-[18px] text-[#0D0E43] mt-[20px]'>Categories: {singleData.category}</h4>
-                            <h5 className='font-Sans font-bold text-[18px] text-[#0D0E43] mt-[20px]'>Tags: {singleData.tags}</h5>
+                            <h4 className='font-Sans font-bold text-[18px] text-[#0D0E43] mt-[20px]'> {singleData.category}</h4>
+                            <h5 className='font-Sans font-bold text-[18px] text-[#0D0E43] mt-[20px]'> {singleData.tags}</h5>
                         </div>
 
                     </div>

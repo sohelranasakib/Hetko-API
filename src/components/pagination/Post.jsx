@@ -19,9 +19,10 @@ const Post = ({ allData, multiList }) => {
  }
   return (
     <>
-     <div className={`${multiList == "activeList" ? "" : "flex justify-between flex-wrap" }`}>
+     {/* <div className={`${multiList == "activeList" ? "" : "flex justify-between flex-wrap" }`}> */}
+     <div className=" flex justify-between flex-wrap">
      {allData.map((item) => (
-        <div className=" lg:w-[32%] p-[10px]">
+        <div className=" lg:w-[23%] p-[10px]">
 
           <div className=" relative  w-[96%] group hover:bg-[#35aa58]">
             <Link to={`/product/${item.id}`}>

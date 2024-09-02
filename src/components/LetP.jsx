@@ -10,7 +10,7 @@ import { useDispatch } from 'react-redux';
 import { addToCart } from './slice/productSlice';
 
 
-const LetP = () => {
+const LetP = ({NewArrival, BestSeller}) => {
 let data = useContext(apiData)
 let dispatch = useDispatch()
 
@@ -20,8 +20,8 @@ let handleCartAdd = (item)=>{
 }
     return (
         <>     
-        {data.map((item)=>(   
-            <div className=" lg:w-[30%] w-full p-[10px]">
+        {NewArrival.map((item)=>(   
+            <div className=" lg:w-[23%] w-full p-[10px]">
              
               <div className=" relative  w-[100%] group ">
               <Link to={`/product/${item.id}`}>
@@ -41,7 +41,7 @@ let handleCartAdd = (item)=>{
                             <h3 className=' font-sans lg:text-[16px] text-[14px] font-semibold text-[red]'>{item.date}</h3>
                         </div>
                     </div>
-                    <div className=' absolute bottom-[100px] left-5 opacity-[0] group-hover:bottom-[180px] duration-75 group-hover:opacity-[1] text-[25px]'>
+                    <div className=' absolute bottom-[100px] left-5 opacity-[0] group-hover:bottom-[80px] duration-75 group-hover:opacity-[1] text-[25px]'>
                         <div className="">
                         <FaCartShopping />
                         </div>
@@ -58,6 +58,7 @@ let handleCartAdd = (item)=>{
                 
             </div>
              ))}
+       
         </>
     )
 }

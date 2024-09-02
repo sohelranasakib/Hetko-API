@@ -15,6 +15,7 @@ import PaginationArea from '../components/pagination/PaginationArea';
 import { FaCaretDown, FaCaretUp } from "react-icons/fa";
 import { PiSquaresFourFill } from "react-icons/pi";
 import { GrSort } from "react-icons/gr";
+import ProductsBar from '../components/ProductsBar';
 
 
 
@@ -23,7 +24,7 @@ const Products = () => {
 
   let [multiList, setMultiList] = useState('')
   let [currentPage, setCurrentPage] = useState(1)
-  let [perPage, setPerPage] = useState(6)
+  let [perPage, setPerPage] = useState(8)
 
   let lastPage = currentPage * perPage
   let firstPage = lastPage - perPage
@@ -96,9 +97,9 @@ const Products = () => {
                        <div onClick={()=>setMultiList("")} className={`h-[42px] w-[40px] text-[35px] ${ multiList == "activeList" ? "bg-white " : "bg-black text-white"} border-[1px] border-[#737373]  `}>
                             <PiSquaresFourFill />
                         </div>
-                        <div onClick={handleList} className={`h-[42px] w-[40px] text-[35px]  ${ multiList == "activeList" ? "bg-black text-white" : "bg-white"} border-[1px] border-[#737373]`}>
+                        <Link to="/pagesproduct" onClick={handleList} className={`h-[42px] w-[40px] text-[35px]  ${ multiList == "activeList" ? "bg-black text-white" : "bg-white"} border-[1px] border-[#737373]`}>
                             <GrSort/>
-                        </div>
+                        </Link>
                        </div>
                     </div>
 
@@ -110,7 +111,7 @@ const Products = () => {
           <div className="w-[10%]"></div>
           <div className="w-[90%] items-center">
             
-              <Post allData={allData} multiList={multiList}/>
+              <Post allData={allData} />
 
             <div className=" text-end">
               <PaginationArea pageNumber={pageNumber} paginate={paginate} currentPage={currentPage} next={next} prev={prev} />
