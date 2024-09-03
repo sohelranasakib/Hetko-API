@@ -65,8 +65,8 @@ const Navber = () => {
             <Container>
                 <Flex>
                     <div className="lg:w-[15%]">
-                        <div className=" lg:pl-0 pl-2">
-                            <img src={logo} alt="logo" />
+                        <div className=" lg:pl-0 pl-2 ">
+                            <img className=' text-[#fff]' src={logo} alt="logo" />
                         </div>
                     </div>
 

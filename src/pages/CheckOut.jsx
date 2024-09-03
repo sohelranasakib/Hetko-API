@@ -21,7 +21,7 @@ const CheckOut = () => {
                         <div className="lg:flex justify-between">
                             <div className="lg:w-[70%] w-full py-9 px-5 bg-[#C1C8E1] rounded-lg">
                                 <form className='' action=''>
-                                    <div className=" flex justify-between items-center">
+                                    <div className=" lg:flex justify-between items-center ">
                                         <h3 className='font-Sans font-bold text-[24px] text-[#0D0E43]'>Contact Information</h3>
                                         <h3 className='font-Sans font-bold text-[16px] text-[#0D0E43]  relative after:absolute after:bottom-[0px] after:left-0 after:h-[2px] after:w-[80%] after:bg-[#262626]  capitalize  '><Link to="/signup">Already have an account?</Link>  <span className='relative after:absolute after:bottom-[0px] after:left-0 after:h-[2px] after:w-[100%] after:bg-[#262626]  capitalize '><Link to="/login">login</Link></span></h3>
                                         

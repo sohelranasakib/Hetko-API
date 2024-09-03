@@ -27,7 +27,7 @@ const TopCatagoris = () => {
         slidesToScroll: 1,
         autoplay: true,
         speed: 1000,
-        autoplaySpeed: 1000,
+        autoplaySpeed: 500,
         arrows: false,
         responsive: [
             {

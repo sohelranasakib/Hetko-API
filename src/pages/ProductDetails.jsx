@@ -57,21 +57,21 @@ const ProductDetails = () => {
             </div>
 
           <Container>
-          <div className=" py-[50px]">
-          <div className=" flex w-[100%] mb-[40px] gap-x-10">
-                        <div className=" ProdectImgBox flex gap-[10px] w-[50%]">
+          <div className=" py-[50px] px-2">
+          <div className=" lg:flex w-[100%] mb-[40px] gap-x-10">
+                        <div className=" ProdectImgBox flex gap-[10px] lg:w-[50%] w-[100%]">
 
-                            <div className="miniimgbox w-[25%]">
+                            <div className="miniimgbox w-[25%] ">
                                 {singleData?.images?.map((item) => (
                                     <img className=' mb-[8px] w-[100%] h-[125px] border-[1px] border-[#9e9e9e] rounded-[6px]' src={item} alt="" />
                                 ))}
                             </div>
-                            <div className="bigimgbox w-[75%]">
+                            <div className="bigimgbox w-[75%] ">
                                 <img src={singleData.thumbnail} className='h-[391px] w-[100%] rounded-[6px]' alt="" />
                             </div>
                         </div>
 
-                        <div className="w-[50%]">
+                        <div className="lg:w-[50%] w-[100%]">
                             <h2 className='font-Sans font-bold text-[36px] text-[#0D0E43]'>{singleData.title}</h2>
                             <div className="flex mt-[20px] gap-x-1 items-center text-[#FFC416] ">
                                 {clientRating}

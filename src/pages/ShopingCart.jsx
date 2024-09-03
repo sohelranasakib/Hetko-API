@@ -54,10 +54,10 @@ const ShopingCart = () => {
                 </Container>
             </div>
             <Container>
-                <Flex className="my-[100px]">
+                <div className=" lg:flex my-[100px]">
 
                     <div className=" w-[60%]">
-                        <div className=" flex justify-between pl-[130px]">
+                        <div className=" flex justify-between lg:pl-[130px] pl-[20px] lg:gap-0 gap-5">
                             <h3 className='font-Sans font-bold text-[20px] text-[#0D0E43]'>Product</h3>
                             <h3 className='font-Sans font-bold text-[20px] text-[#0D0E43]'>Price</h3>
                             <h3 className='font-Sans font-bold text-[20px] text-[#0D0E43]'>Quantity</h3>
@@ -65,28 +65,32 @@ const ShopingCart = () => {
                         </div>
                         {data.map((item, index) => (
                             <div className=" flex pt-[40px] relative after:absolute after:contain-[''] after:bottom-[-10px] after:left-0 after:h-[1px] after:w-[100%] after:bg-[#C7CEE4]  ">
-                                <div className=" flex gap-x-2">
+                                <div className="">
+                                <div className=" lg:flex gap-x-2">
                                     <div className=" relative">
-                                        <img className=' w-[200px] h-[100px]' src={item.thumbnail} alt="" />
+                                        <img className=' lg:w-[200px] h-[100px]' src={item.thumbnail} alt="" />
                                         <div onClick={() => handleRemove(index)} className=" absolute top-[-10px] right-[-10px] bg-black rounded-full text-[#fff] text-[23px] ">
                                             <RxCross2 className=' ' />
                                         </div>
                                     </div>
-
                                     <div className=" pl-10">
-                                        <div className=" w-[200px]">
-                                            <h3 className=' font-bold text-[16px] font-sans'>{item.title}</h3>
-                                            <h3>Color: {item.color}</h3>
-                                            <h3>Size:XL</h3>
+                                        <div className=" lg:w-[200px] w-[100px]">
+                                            <h3 className=' font-bold lg:text-[16px] font-sans'>{item.title}</h3>
+                                            {/* <h3>Color: {item.color}</h3>
+                                            <h3>Size:XL</h3> */}
                                         </div>
                                     </div>
+                                   
                                 </div>
-                                <div className=" w-[70%] flex justify-between pl-[10px]">
+                               
+                                </div>
+                                
+                                <div className="w-[70%] lg:flex justify-between lg:pl-[10px] pl-[100px]">
                                     <h3 className='font-Sans font-bold text-[16px] text-[#0D0E43] mr-[30px]'>${item.price}</h3>
-                                    <div className="">
-                                        <button onClick={() => handleDecrement(index)} className='font-Sans font-bold text-[20px] text-[#0D0E43]'>-</button>
-                                        <button className='font-Sans font-bold text-[16px] text-[#0D0E43] px-3'>{item.qun}</button>
-                                        <button onClick={() => handleIcrement(index)} className='font-Sans font-bold text-[20px] text-[#0D0E43]'>+</button>
+                                    <div className=" lg:flex">
+                                        <h2 onClick={() => handleDecrement(index)} className='font-Sans font-bold text-[20px] text-[#0D0E43]'>-</h2>
+                                        <h2 className='font-Sans font-bold text-[16px] text-[#0D0E43] px-3'>{item.qun}</h2>
+                                        <h2 onClick={() => handleIcrement(index)} className='font-Sans font-bold text-[20px] text-[#0D0E43]'>+</h2>
                                     </div>
                                     <h3 className='font-Sans font-bold text-[16px] text-[#0D0E43]'>${item.price * item.qun}</h3>
                                 </div>
@@ -95,14 +99,14 @@ const ShopingCart = () => {
 
 
 
-                        <div className="flex justify-between">
+                        {/* <div className="flex justify-between">
                             <button className='py-[10px] px-[30px] bg-[#FB2E86] hover:bg-black mt-[50px] font-Sans font-bold text-[16px] text-[#fff] rounded-lg'>Update Curt</button>
                             <button className='py-[10px] px-[30px] bg-[#FB2E86] hover:bg-black mt-[50px] font-Sans font-bold text-[16px] text-[#fff] rounded-lg'>Clear Curt</button>
-                        </div>
+                        </div> */}
 
                     </div>
-                    <div className="w-[30%] pl-[100px]">
-                        <div className=" text-center">
+                    <div className="lg:w-[30%] w-[100%] lg:pl-[90px] lg:px-0 px-4">
+                        <div className=" text-center lg:pt-0 pt-8">
                             <h3 className='font-Sans font-bold text-[20px] text-[#0D0E43]'>Cart Totals</h3>
                             <div className="py-[20px] px-[20px] bg-[#F4F4FC] mt-[10px] rounded-md">
                                 <div className=" mb-[30px] flex justify-between relative after:absolute after:contain-[''] after:bottom-[-10px] after:left-0 after:h-[1px] after:w-[100%] after:bg-[#C7CEE4]">
@@ -165,7 +169,7 @@ const ShopingCart = () => {
                         theme="light"
 
                     />
-                </Flex>
+                </div>
             </Container>
         </section>
     )

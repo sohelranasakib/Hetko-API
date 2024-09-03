@@ -91,7 +91,7 @@ const ShopList = () => {
                     </div>
                 </div>
 
-                <div className=" w-[70%]">
+                <div className=" lg:w-[70%] w-[100%]">
                     {data.map((item) => (
                         <div className=" flex gap-x-10 py-[10px]">
                             <div className="lg:w-[40%] w-full">
@@ -106,7 +106,7 @@ const ShopList = () => {
                             </div>
                             <div className="lg:w-[55%] w-full">
                                 <div className="">
-                                    <h2 className='font-Sans font-bold text-[24px] text-[#0D0E43]'>{item.title}</h2>
+                                    <h2 className='font-Sans font-bold lg:text-[24px] text-[16px] text-[#0D0E43]'>{item.title}</h2>
                                     <div className="flex">
                                         <div className="flex mt-[20px]">
                                             <h3 className='font-Sans font-bold text-[16px] text-[#0D0E43]'>${item.price} <span className=' ml-[20px] text-[#1e7e3e]'>{item.discountPercentage}% <span className=''>Discount</span></span></h3>

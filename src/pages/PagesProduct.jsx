@@ -106,8 +106,8 @@ const PagesProduct = () => {
                 <div className="">
                     <ProductsBar />
                 </div>
-                <div className=" flex">
-                    <div className="w-[20%]">
+                <div className=" lg:flex">
+                    <div className="lg:w-[20%] w-[100%]">
                         <div className="">
                             <div className="">
                                 <h2 onClick={() => setBrandShow(!brandshow)} className=' relative font-Sans font-bold text-[22px] text-[#0D0E43] after:absolute after:contain-[""] after:bottom-0 after:left-0 after:h-[3px] after:w-[150px] after:bg-[#fff] hover:after:bg-black flex items-center gap-x-5'>Product Brand <p>{brandshow == true ? <FaCaretUp /> : <FaCaretDown />}</p></h2>
@@ -201,7 +201,7 @@ const PagesProduct = () => {
 
 
                     </div>
-                    <div className="w-[70%]">
+                    <div className="lg:w-[70%] w-[100%]">
                         {brandSearchFilter.length > 0 ?
                             brandSearchFilter.map((item) => (
                                 <div className=" flex gap-x-10 py-[10px]">
@@ -247,14 +247,15 @@ const PagesProduct = () => {
                                 {data.map((item) => (
                                     <div className=" flex gap-x-10 py-[10px]">
                                         <div className="lg:w-[40%] w-full">
+                                        <Link to={`/product/${item.id}`}>
                                             <div className=" relative group">
                                                 <img className='w-full h-[300px]' src={item.thumbnail} alt="" />
-                                                <Link to={`/product/${item.id}`}>
+                                                
                                                     <h3 className=" font-sans font-bold absolute top-[130px] left-[50%] translate-x-[-50%]  h-[40px] w-[120px] flex justify-center items-center bg-[#08D15F] rounded-lg text-[#fff] opacity-0 group-hover:top-[130px] duration-75 group-hover:opacity-[1] ">Shop Now</h3>
-                                                </Link>
+                                                
 
                                             </div>
-
+                                            </Link>
                                         </div>
                                         <div className="lg:w-[55%] w-full">
                                             <div className="">
