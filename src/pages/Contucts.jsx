@@ -1,33 +1,38 @@
 import React from 'react'
 import contact from "../assets/contact.png"
 import Container from '../components/Container'
+import { Link } from 'react-router-dom'
+import { RxCaretRight } from "react-icons/rx";
 
 const Contucts = () => {
   return (
-    <section  className=' py-24 px-3 bg-[#F6F5FF]'>
-    <Container>
-    <div className="">
-                <h3 className='font-Sans font-bold text-[42px] text-[#0D0E43]'>Contact</h3>
-            </div>
-            <div className=" flex">
-                <h4 className='font-Sans font-bold text-[16px] text-[#0D0E43]'>Home ,</h4>
-                <h3 className='font-Sans font-bold text-[16px] text-[#0D0E43]'>Pages ,</h3>
-                <p className='font-Sans font-bold text-[16px] text-[#FB2E86]'>Contact me</p>
-            </div>
+    <section  className=' lg:py-24'>
+           <div className="lg:pb-[60px] pb-[10px] pl-5 bg-[#F6F5FF]">
+                <Container>
+                    <div className=" lg:pt-10">
+                        <h2 className='font-sans text-[#262626] lg:text-[36px] text-[20px] font-bold'>Shop Left Sidebar</h2>
+                        <h3 className="flex items-center gap-x-1 font-sans text-[12px] text-[#767676] font-normal">
+                            <Link to="/">Home</Link><RxCaretRight />Pages <RxCaretRight /> Shop Left Sidebar
+                        </h3>
+                    </div>
+                </Container>
 
-            <div className="flex justify-between bg-[#fff] px-4 pb-24">
-                <div className="w-[49%]">
-                    <div className="mt-12">
-                        <div className=" relative after:absolute after:contain-[''] after:top-[150px] after:left-0 after:w-[20px] after:h-[20px] after:bg-[#0D0E43] after:rounded-full  before:absolute before:contain-[''] before:top-[150px] before:left-[30px] before:w-[20px] before:h-[20px] before:bg-[#FF27B7] before:rounded-full">
-                        <h3 className='font-Sans font-bold text-[32px] text-[#0D0E43] relative after:absolute after:contain-[""] after:top-[150px] after:left-[60px] after:w-[20px] after:h-[20px] after:bg-[#37DAF3] after:rounded-full '>Information About us</h3>
+            </div>
+    <Container>
+
+            <div className="lg:flex justify-between bg-[#fff] lg:pb-24 lg:px-0 px-4">
+                <div className="w-[49%]]">
+                    <div className="lg:mt-12 mt-[15px]">
+                        <div className=" relative after:absolute after:contain-[''] after:top-[150px] after:left-0 lg:after:w-[20px] lg:after:h-[20px] after:bg-[#0D0E43] after:rounded-full  before:absolute before:contain-[''] before:top-[150px] before:left-[30px] lg:before:w-[20px] lg:before:h-[20px] before:bg-[#FF27B7] before:rounded-full">
+                        <h3 className='font-Sans font-bold text-[32px] text-[#0D0E43] relative after:absolute after:contain-[""] after:top-[150px] after:left-[60px] lg:after:w-[20px] lg:after:h-[20px] after:bg-[#37DAF3] after:rounded-full '>Information About us</h3>
                         <p className='font-Sans font-semibold text-[16px] text-[#0D0E43] w-[80%]'>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis neque ultrices mattis aliquam, malesuada diam est. Malesuada sem tristique amet erat vitae eget dolor lobortis. Accumsan faucibus vitae lobortis quis bibendum quam.</p>
                         </div>
                     </div>
-                        <div className="mt-40">
+                        <div className="lg:mt-40">
                             <h3 className='font-Sans font-bold text-[32px] text-[#0D0E43] ' >Get in Touch</h3>
                             <p className='font-Sans font-semibold text-[16px] text-[#0D0E43] '>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Mattis neque ultrices  tristique amet erat vitae eget dolor los vitae lobortis quis bibendum quam.</p>
                         </div>
-                        <div className=" flex justify-between mt-14">
+                        <div className=" flex justify-between lg:mt-14 mt-[20px]">
                             <div className="w-[48%]">
                             <input className='h-[50px] w-full border-2 border-[#0D0E43] rounded-lg pl-2' type="text" placeholder='Your Name*' />
                             </div>
@@ -46,22 +51,22 @@ const Contucts = () => {
                            
                             </div>
 
-                            <div className="w-full mt-5">
-                    <button className='py-[10px] px-[30px] bg-[#FB2E86] mt-[50px] font-Sans font-bold text-[16px] text-[#fff] rounded-lg'>Send Mail</button>
+                            <div className="w-full lg:mt-5">
+                    <button className='py-[10px] px-[30px] bg-[#FB2E86] lg:mt-[50px] mt-[15px] font-Sans font-bold text-[16px] text-[#fff] rounded-lg'>Send Mail</button>
                     </div>
                 </div>
-                <div className="w-[49%]">
-                   <div className="mt-12">
+                <div className=":w-[49%]">
+                   <div className="lg:mt-12 mt-[15px]">
                    <h2 className='font-Sans font-bold text-[32px] text-[#0D0E43]'>Contact Way</h2>
                     <div className="flex justify-between">
                        <div className="w-[50%]">
-                       <div className=" relative after:absolute after:contain-[''] after:top-[5px] after:left-0 after:h-[35px] after:w-[35px] after:bg-[#5726DF] after:rounded-full">
+                       <div className=" relative after:absolute after:contain-[''] after:top-[5px] after:left-0 lg:after:h-[35px] lg:after:w-[35px] after:bg-[#5726DF] after:rounded-full">
                             <h3 className='font-Sans font-semibold text-[16px] text-[#0D0E43] ml-10'>Tel: 877-67-88-99</h3>
                             <h4 className='font-Sans font-semibold text-[16px] text-[#0D0E43] ml-10'> E-Mail: shop@store.com</h4>
                         </div>
                        </div>
                         <div className="w-[50%]">
-                        <div className=" relative after:absolute after:contain-[''] after:top-[5px] after:left-0 after:h-[35px] after:w-[35px] after:bg-[#FF27B7] after:rounded-full">
+                        <div className=" relative after:absolute after:contain-[''] after:top-[5px] after:left-0 lg:after:h-[35px] lg:after:w-[35px] after:bg-[#FF27B7] after:rounded-full">
                             <h3 className='font-Sans font-semibold text-[16px] text-[#0D0E43] ml-10'>Support Forum</h3>
                             <h4 className='font-Sans font-semibold text-[16px] text-[#0D0E43] ml-10'> For over 24hr</h4>
                         </div>
@@ -69,15 +74,15 @@ const Contucts = () => {
                         
                         
                     </div>
-                    <div className="flex justify-between mt-14">
+                    <div className="flex justify-between lg:mt-14">
                         <div className="w-[50%]">
-                        <div className=" relative after:absolute after:contain-[''] after:top-[5px] after:left-0 after:h-[35px] after:w-[35px] after:bg-[#FFB265] after:rounded-full">
+                        <div className=" relative after:absolute after:contain-[''] after:top-[5px] after:left-0 lg:after:h-[35px] lg:after:w-[35px] after:bg-[#FFB265] after:rounded-full">
                             <h3 className='font-Sans font-semibold text-[16px] text-[#0D0E43] ml-10'>20 Margaret st, London</h3>
                             <h4 className='font-Sans font-semibold text-[16px] text-[#0D0E43] ml-10'> Great britain, 3NM98-LK</h4>
                         </div>
                         </div>
                        <div className="w-[50%]">
-                       <div className=" relative after:absolute after:contain-[''] after:top-[5px] after:left-0 after:h-[35px] after:w-[35px] after:bg-[#1BE982] after:rounded-full">
+                       <div className=" relative after:absolute after:contain-[''] after:top-[5px] after:left-0 lg:after:h-[35px] lg:after:w-[35px] after:bg-[#1BE982] after:rounded-full">
                             <h3 className='font-Sans font-semibold text-[16px] text-[#0D0E43] ml-10'>Free standard shipping</h3>
                             <h4 className='font-Sans font-semibold text-[16px] text-[#0D0E43] ml-10'> on all orders.</h4>
                         </div>
@@ -86,7 +91,7 @@ const Contucts = () => {
                         
                     </div>
                    </div>
-                <div className="mt-40">
+                <div className="lg:mt-40">
                     <img src={contact} alt="" />
                 </div>
                 </div>

@@ -18,7 +18,7 @@ const SignUp = () => {
                 </Container>
             </div>
             <Container>
-                <div className=" py-[40px]">
+                <div className=" py-[40px] lg:pl-0 pl-4">
                     <div className="">
                         <h2 className=' font-sans text-[#262626] lg:text-[28px] text-[20px] font-bold'>Your Personal Details</h2>
                         <div className="flex gap-x-10 py-[10px]">

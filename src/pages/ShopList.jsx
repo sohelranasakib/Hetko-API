@@ -96,7 +96,7 @@ const ShopList = () => {
                         <div className=" flex gap-x-10 py-[10px]">
                             <div className="lg:w-[40%] w-full">
                                 <div className=" relative group">
-                                    <img className='w-full h-[300px]' src={item.thumbnail} alt="" />
+                                    <img className='w-full lg:h-[300px]' src={item.thumbnail} alt="" />
                                     <Link to={`/product/${item.id}`}>
                                         <h3 className=" font-sans font-bold absolute top-[130px] left-[50%] translate-x-[-50%]  h-[40px] w-[120px] flex justify-center items-center bg-[#08D15F] rounded-lg text-[#fff] opacity-0 group-hover:top-[130px] duration-75 group-hover:opacity-[1] ">Shop Now</h3>
                                     </Link>
@@ -108,8 +108,8 @@ const ShopList = () => {
                                 <div className="">
                                     <h2 className='font-Sans font-bold lg:text-[24px] text-[16px] text-[#0D0E43]'>{item.title}</h2>
                                     <div className="flex">
-                                        <div className="flex mt-[20px]">
-                                            <h3 className='font-Sans font-bold text-[16px] text-[#0D0E43]'>${item.price} <span className=' ml-[20px] text-[#1e7e3e]'>{item.discountPercentage}% <span className=''>Discount</span></span></h3>
+                                        <div className="flex lg:mt-[20px]">
+                                            <h3 className='font-Sans font-bold lg:text-[16px] text-[#0D0E43]'>${item.price} <span className=' ml-[20px] text-[#1e7e3e]'>{item.discountPercentage}% <span className=''>Discount</span></span></h3>
 
                                             {/* <h4 className='font-Sans font-bold text-[16px] text-[#FB2E86]'>$26.00</h4> */}
                                         </div>
@@ -117,8 +117,8 @@ const ShopList = () => {
                                                 {clintRating}
                                              </div> */}
                                     </div>
-                                    <h2 className=' font-Sans font-bold text-[16px] text-[#FB2E86]'>Stock: {item.stock}</h2>
-                                    <p className='font-Sans font-semibold text-[16px] text-[#0D0E43] mt-[20px] lg:w-[80%]'>{item.description}</p>
+                                    <h2 className=' font-Sans font-bold lg:text-[16px] text-[#FB2E86]'>Stock: {item.stock}</h2>
+                                    <p className='font-Sans font-semibold lg:text-[16px] text-[11px] text-[#0D0E43] lg:mt-[20px] lg:w-[80%]'>{item.description}</p>
                                     <div className="flex my-[10px] text-[20px] gap-6">
                                         <FiShoppingCart />
                                         <FaRegHeart />
@@ -127,7 +127,7 @@ const ShopList = () => {
                                         </div>
                                     </div>
                                     <Link to={`/product/${item.id}`}>
-                                        <button className='py-[10px] px-[25px] bg-[#262626] mt-[0px] font-Sans font-bold text-[16px] text-[#fff] rounded-lg'>Shop Now</button>
+                                        <button className='lg:py-[10px] py-[5px] lg:px-[25px] px-[10px] bg-[#262626] mt-[0px] font-Sans font-bold text-[16px] text-[#fff] rounded-lg'>Shop Now</button>
                                     </Link>
                                 </div>
 

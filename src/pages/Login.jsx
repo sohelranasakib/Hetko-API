@@ -17,8 +17,8 @@ const Login = () => {
         </Container>
       </div>
       <Container>
-        <div className="py-[70px] w-[100%] ">
-          <div className="  w-[544px] h-[474px] bg-[#F6F5FF] mx-auto">
+        <div className="py-[70px] w-[100%] lg:px-0 px-4">
+          <div className="  lg:w-[544px] h-[474px] bg-[#F6F5FF] mx-auto">
             <h2 className='text-[45px] font-sans font-bold flex justify-center mb-[10px]'>Login</h2>
             <span className=' font-normal font-sans text-[#9096B2] text-[17px] flex justify-center mb-[25px]' >Please login using account detail bellow.</span>
             <div className="flex justify-center ">
@@ -28,7 +28,7 @@ const Login = () => {
               <input className=' w-[80%] h-[52px] border-[2px] my-[15px] border-[#9096B2] px-[20px] outline-none text-[#9096B2] text-[17px] items-center ' placeholder=' Password' type="text" />
             </div>
             <div className=" flex justify-center">
-            <span className=' w-[28%] font-bold font-sans text-[#9096B2] text-[17px]  border-b-2 mb-[25px] border-[#d4cdcd] hover:text-[#262626] hover:border-[#262626]' >Forgot password?</span>
+            <span className=' lg:w-[28%] font-bold font-sans text-[#9096B2] text-[17px]  border-b-2 mb-[25px] border-[#d4cdcd] hover:text-[#262626] hover:border-[#262626]' >Forgot password?</span>
             </div>
             <div className="flex justify-center mb-5">
               <a className=' font-sans font-bold text-[20px] py-[10px] w-[80%] bg-[#FB2E86] text-[#fff] text-center ' href="#"> <Link to="/account">Sign In</Link> </a>
