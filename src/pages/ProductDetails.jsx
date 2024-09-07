@@ -44,7 +44,7 @@ const ProductDetails = () => {
     }
 
     return (
-        <section>
+        <section className=' lg:pt-[148px] pt-[173px]'>
             <div className="lg:pb-[60px] pb-[10px] pl-5 bg-[#F6F5FF]">
                 <Container>
                     <div className=" lg:pt-10">
@@ -57,7 +57,7 @@ const ProductDetails = () => {
             </div>
 
           <Container>
-          <div className=" py-[50px] px-2">
+          <div className=" py-[30px] px-2">
           <div className=" lg:flex w-[100%] mb-[40px] gap-x-10">
                         <div className=" ProdectImgBox flex gap-[10px] lg:w-[50%] w-[100%]">
 

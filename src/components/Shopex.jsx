@@ -25,7 +25,7 @@ const Shopex = () => {
                     </div>
                     </div>
                 </div>
-            <div className="lg:w-[24%] w-full  pt-[20px] pb-2 bg-[#fff] ">
+            <div className="lg:w-[24%] w-full  pt-[20px] pb-2 bg-[#fff]">
                     <div className="">
                    <img className='ml-[50%] translate-x-[-50%]' src={offer02} alt="" />
                    <div className=" relative text-center  w-[100%] px-[40px] bg-[#fff] mt-[20px]  ">
@@ -37,7 +37,7 @@ const Shopex = () => {
                     </div>
                     </div>
                 </div>
-            <div className="lg:w-[24%] w-full  pt-[20px] pb-2 bg-[#fff] ">
+            <div className="lg:w-[24%] w-full  pt-[20px] pb-2 bg-[#fff]  ">
                     <div className="">
                    <img className='ml-[50%] translate-x-[-50%]' src={offer03} alt="" />
                    <div className=" relative text-center  w-[100%] px-[40px] bg-[#fff] mt-[20px]  ">

@@ -8,7 +8,7 @@ import { RxCaretRight } from "react-icons/rx";
 
 const Order = () => {
   return (
-    <section className='py-[0px] px-3'>
+    <section className=' lg:pt-[148px] pt-[173px] '>
           <div className="lg:pb-[50px] pb-[10px] pl-5 bg-[#F6F5FF]">
         <Container>
           <div className=" lg:pt-10">

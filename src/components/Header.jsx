@@ -46,7 +46,7 @@ const Header = () => {
     }, [cartShow, useShow])
 
     return (
-        <section className=' bg-[#7E33E0] py-[25px]'>
+        <section className=' bg-[#7E33E0] py-[25px] fixed top-0 left-0 w-[100%] z-50'>
             <Container>
                 <Flex>
                     <div className=" lg:flex w-[40%]">
@@ -101,7 +101,7 @@ const Header = () => {
 
                 </Flex>
                 {useShow &&
-                    <div className='absolute lg:top-[53px] top-[45px] z-50  lg:right-[180px] right-[30px] bg-[#262626] w-[200px] py-[10px]'>
+                    <div className='absolute lg:top-[53px] top-[50px] z-50  lg:right-[180px] right-[30px] bg-[#262626] w-[200px] py-[10px]'>
                         <div className='text-center'>
                             <h3 className='text-[rgba(255,255,255,0.7)] font-sans font-bold text-[16px] py-2 hover:text-white'>
                                 <Link to="/account">My Account</Link>
@@ -119,7 +119,7 @@ const Header = () => {
                 }
 
                 {cartShow &&
-                    <div className=" w-[250px] bg-[#262626] absolute lg:top-[53px] top-[75px] lg:right-[80px] right-[10px] z-50 py-3">
+                    <div className=" w-[250px] bg-[#262626] absolute lg:top-[53px] top-[80px] lg:right-[80px] right-[10px] z-50 py-3">
                         {data.map((item) => (
                             <div className="flex justify-around items-center pb-2">
                                 <div className="">
@@ -139,11 +139,11 @@ const Header = () => {
                             <div className="">
                                 <Link to="/shopingcart" className=' lg:w-[120px] w-[100px] font-sans font-bold text-[16px]  h-[40px] border-2 border-[#fff]   inline-block text-center leading-[40px] bg-[#262626] text-[rgba(255,255,255,0.7)] text-white hover:bg-white hover:text-black  border-b-2 hover:border-b-black  duration-300 ease-in-out' href="#"> View Cart</Link>
                             </div>
-                            <div className="">
+                            {/* <div className="">
                                 <a href="#">
                                     <a className=' lg:w-[120px] w-[100px] font-sans font-bold text-[16px]  h-[40px] border-2 border-[#fff]   inline-block text-center leading-[40px] bg-[#262626] text-[rgba(255,255,255,0.7)] text-white hover:bg-white hover:text-black  border-b-2 hover:border-b-black  duration-300 ease-in-out' href="#">Cheack Out</a>
                                 </a>
-                            </div>
+                            </div> */}
                         </div>
                     </div>
                 }
@@ -154,3 +154,4 @@ const Header = () => {
 }
 
 export default Header
+

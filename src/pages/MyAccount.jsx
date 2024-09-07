@@ -5,7 +5,7 @@ import { RxCaretRight } from "react-icons/rx";
 
 const MyAccount = () => {
   return (
-    <section>
+    <section className=' pt-[148px]'>
           <div className="lg:pb-[60px] pb-[10px] pl-5 bg-[#F6F5FF] ">
         <Container>
           <div className=" lg:pt-10">

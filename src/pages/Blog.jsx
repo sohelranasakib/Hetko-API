@@ -18,13 +18,13 @@ import { Link } from 'react-router-dom'
 
 const Blog = () => {
     return (
-        <section className=' py-24 px-3 '>
+        <section className=' px-3 lg:pt-[148px] pt-[173px]'>
             <div className="lg:pb-[60px] pb-[10px] pl-5 bg-[#F6F5FF]">
                 <Container>
-                    <div className=" lg:pt-10">
+                    <div className=" lg:pt-5">
                         <h2 className='font-sans text-[#262626] lg:text-[36px] text-[20px] font-bold'>Blog</h2>
                         <h3 className="flex items-center gap-x-1  font-sans text-[12px] text-[#767676] font-normal">
-                            <Link to="/">Home</Link><RxCaretRight /> Pages <RxCaretRight /> Shopping Cart
+                            <Link to="/">Home</Link><RxCaretRight /> Pages <RxCaretRight /> Blog
                         </h3>
                     </div>
                 </Container>

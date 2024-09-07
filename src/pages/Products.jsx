@@ -60,10 +60,10 @@ const Products = () => {
   }
 
   return (
-    <section>
-      <div className="lg:pb-[50px] pb-[10px] pl-5 bg-[#F6F5FF]">
+    <section className=' lg:pt-[148px] pt-[173px]'>
+      <div className="lg:pb-[40px] pb-[10px] pl-5 bg-[#F6F5FF]">
         <Container>
-          <div className=" lg:pt-10">
+          <div className=" lg:pt-5">
             <h2 className='font-sans text-[#262626] lg:text-[36px] text-[20px] font-bold'>Products</h2>
             <h3 className="flex items-center gap-x-2 font-sans text-[12px] text-[#767676] font-normal">
               <Link to="/">Home</Link><RxCaretRight /> Products
@@ -73,7 +73,7 @@ const Products = () => {
       </div>
       <Container>
                    <div className="">
-                   <div className="lg:flex mt-[10px] bg-[#fff] py-[30px] px-[40px]">
+                   <div className="lg:flex lg:mt-[10px] bg-[#fff] lg:py-[30px] px-[40px]">
                 <div className="lg:w-[40%] w-full">
                     <h2 className='font-Sans font-bold text-[22px] text-[#0D0E43]'>Ecommerce Acceories & Fashion item </h2>
                     <h5 className='font-Sans font-semibold text-[16px] text-[#0D0E43]'>About 9,620 results (0.62 seconds)</h5>

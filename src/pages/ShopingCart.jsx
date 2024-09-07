@@ -42,7 +42,7 @@ const ShopingCart = () => {
 
 
     return (
-        <section>
+        <section className=' pt-[148px]'>
             <div className="lg:pb-[60px] pb-[10px] pl-5 bg-[#F6F5FF]">
                 <Container>
                     <div className=" lg:pt-10">
@@ -54,7 +54,7 @@ const ShopingCart = () => {
                 </Container>
             </div>
             <Container>
-                <div className=" lg:flex my-[100px]">
+                <div className=" lg:flex lg:my-[100px] my-[15px]">
 
                     <div className=" w-[60%]">
                         <div className=" flex justify-between lg:pl-[130px] pl-[20px] lg:gap-0 gap-5">

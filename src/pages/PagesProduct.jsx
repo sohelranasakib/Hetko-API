@@ -89,10 +89,10 @@ const PagesProduct = () => {
 
 
     return (
-        <section>
-            <div className="lg:pb-[60px] pb-[10px] pl-5 bg-[#F6F5FF]">
+        <section className=' lg:pt-[148px] pt-[173px]'>
+            <div className="lg:pb-[40px] pb-[10px] pl-5 bg-[#F6F5FF]">
                 <Container>
-                    <div className=" lg:pt-10">
+                    <div className=" lg:pt-5">
                         <h2 className='font-sans text-[#262626] lg:text-[36px] text-[20px] font-bold'>Shop Left Sidebar</h2>
                         <h3 className="flex items-center gap-x-1 font-sans text-[12px] text-[#767676] font-normal">
                             <Link to="/">Home</Link><RxCaretRight />Pages <RxCaretRight /> Shop Left Sidebar

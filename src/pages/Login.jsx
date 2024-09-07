@@ -5,7 +5,7 @@ import { Link } from 'react-router-dom';
 
 const Login = () => {
   return (
-    <section>
+    <section className=' lg:pt-[148px] pt-[173px]'>
       <div className="lg:pb-[60px] pb-[10px] pl-5 bg-[#F6F5FF] ">
         <Container>
           <div className=" lg:pt-10">
@@ -17,7 +17,7 @@ const Login = () => {
         </Container>
       </div>
       <Container>
-        <div className="py-[70px] w-[100%] lg:px-0 px-4">
+        <div className="lg:py-[70px] py-[20px] w-[100%] lg:px-0 px-4">
           <div className="  lg:w-[544px] h-[474px] bg-[#F6F5FF] mx-auto">
             <h2 className='text-[45px] font-sans font-bold flex justify-center mb-[10px]'>Login</h2>
             <span className=' font-normal font-sans text-[#9096B2] text-[17px] flex justify-center mb-[25px]' >Please login using account detail bellow.</span>

@@ -7,7 +7,7 @@ import bann from "../assets/banner2.png"
 const Banner = () => {
 
     return (
-        <section>
+        <section className=' lg:pt-[140px] pt-[170px]'>
             <div className=" lg:pt-0 pt-[100px]">
             <div className="flex  ">
                 <div className="lg:w-[15%] w-[100%]">

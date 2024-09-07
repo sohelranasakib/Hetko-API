@@ -61,7 +61,7 @@ const Navber = () => {
     };
 
     return (
-        <section className='py-4 bg-[#f1f1f1]'>
+        <section className='py-4 bg-[#54ca29] fixed lg:top-[74px] top-[100px] left-0 w-[100%] z-40'>
             <Container>
                 <Flex>
                     <div className="lg:w-[15%]">
@@ -71,7 +71,7 @@ const Navber = () => {
                     </div>
 
                     <div className="lg:w-[40%] w-[10%]">
-                        <ul className={`lg:flex lg:flex-row flex flex-col z-50  gap-y-3 gap-x-10  pl-[20px] pt-[20px] lg:pt-0 font-sans text-[#767676] text-[18px] font-medium lg:static fixed duration-[800ms]  ${show === true ? "bg-[#262626] top-[0px] left-0 w-1/2 h-full py-2" : "top-[0px] left-[-250px] h-full"}`}>
+                        <ul className={`lg:flex lg:flex-row flex flex-col z-50  gap-y-3 gap-x-10  pl-[20px] pt-[20px] lg:pt-0 font-sans text-[#767676] text-[18px] font-medium lg:static fixed duration-[800ms]  ${show === true ? "bg-[#262626] top-[102px] left-0 w-1/2 h-full py-2" : "top-[0px] left-[-250px] h-full"}`}>
                             <li className='text-white flex justify-between items-center lg:hidden'>Menu <RxCross2 className='mr-[20px]' /></li>
                             <li><Link to="/" className='font-Sans font-semibold text-[16px] lg:text-[#0D0E43] text-white duration-300 ease-in-out hover:text-[#FB2E86] pt-1'>Home</Link></li>
                             <li><Link to="/pagesproduct" className='font-Sans font-semibold text-[16px] lg:text-[#0D0E43] text-white duration-300 ease-in-out hover:text-[#FB2E86] pt-1'>Pages</Link></li>
@@ -81,7 +81,7 @@ const Navber = () => {
                             <li><Link to="/contuct" className='font-Sans font-semibold text-[16px] lg:text-[#0D0E43] text-white duration-300 ease-in-out hover:text-[#FB2E86] pt-1'>Contact</Link></li>
                         </ul>
                     </div>
-
+ 
                     <div className="lg:w-[50%] w-[100%] text-end">
                         <div className="relative">
                             <input 
@@ -96,7 +96,7 @@ const Navber = () => {
                                 <IoIosSearch className='text-[#ffff] text-[25px] absolute top-[50%] translate-y-[-50%] left-[50%] translate-x-[-50%]' />
                             </div>
                             {searchFilter.length > 0 &&
-                                <div className="w-[500px] h-[400px] overflow-y-scroll bg-[#f1f1f1] absolute lg:top-[53px] top-[75px] left-[220px] z-50 py-3">
+                                <div className="lg:w-[500px] w-[250px] lg:h-[400px] h-[250px] overflow-y-scroll bg-[#f1f1f1] absolute lg:top-[53px] top-[42px] lg:left-[220px] z-50 py-3 lg:px-0 px-4">
                                     {searchFilter.map((item, index) => (
                                         <div key={item.id} 
                                              onClick={() => handleSingleSearch(item.id)} 
@@ -125,3 +125,4 @@ const Navber = () => {
 }
 
 export default Navber;
+
