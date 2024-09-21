@@ -14,8 +14,19 @@ import ProductsBar from '../components/ProductsBar';
 
 const ShopList = () => {
     let data = useContext(apiData)
+
     let dispatch = useDispatch()
     let [multiList, setMultiList] = useState('')
+    
+    let [productShow, setProductShow] = useState([])
+    let [allShow, setAllShow] = useState(true)
+
+     useEffect(()=>{
+       let productAmi = data.slice(0, 4)
+       setProductShow(productAmi)
+     },[""])
+     
+     
 
    
 
@@ -35,9 +46,20 @@ const ShopList = () => {
 
     }
 
+    let handleShow = ()=>{
+        setProductShow(data)
+        setAllShow(false)
+    }
+
+    let handleHide = ()=>{
+        let productAmi = data.slice(0, 4)
+        setProductShow(productAmi)
+        setAllShow(true)
+    }
+
 
     return (
-        <section>
+        <section className=' pb-[50px]'>
 
             <div className="lg:pb-[60px] pb-[10px] pl-5 bg-[#F6F5FF] lg:pt-[148px] pt-[174px]">
                 <Container>
@@ -92,7 +114,7 @@ const ShopList = () => {
                 </div>
 
                 <div className=" lg:w-[70%] w-[100%]">
-                    {data.map((item) => (
+                    {productShow.map((item) => (
                         <div className=" flex gap-x-10 py-[10px]">
                             <div className="lg:w-[40%] w-full">
                                 <div className=" relative group">
@@ -134,7 +156,12 @@ const ShopList = () => {
                             </div>
                         </div>
                     ))}
-
+                    {allShow ? data.length > 4 &&
+                      <button onClick={handleShow} className=' font-sans font-bold text-[18px] px-[20px] py-[10px] border-2 hover:bg-[#262626] hover:text-[#fff] rounded-lg duration-500 ease-in-out'>Show All</button>
+                    :
+                    <button onClick={handleHide} className=' font-sans font-bold text-[18px] px-[20px] py-[10px] border-2 hover:bg-[#262626] hover:text-[#fff] rounded-lg duration-500 ease-in-out'>Hide</button>
+                    }
+                  
                 </div>
 
             </Container>

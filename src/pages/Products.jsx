@@ -24,7 +24,7 @@ const Products = () => {
 
   let [multiList, setMultiList] = useState('')
   let [currentPage, setCurrentPage] = useState(1)
-  let [perPage, setPerPage] = useState(8)
+  let [perPage, setPerPage] = useState(12)
 
   let lastPage = currentPage * perPage
   let firstPage = lastPage - perPage

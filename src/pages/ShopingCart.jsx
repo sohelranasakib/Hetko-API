@@ -6,7 +6,7 @@ import { RxCaretRight, RxCross2 } from "react-icons/rx";
 import cart01 from "../assets/cart01.png"
 import { useDispatch, useSelector } from 'react-redux';
 import { productDecrement, productIcrement, removeProduct } from '../components/slice/productSlice';
-import { ToastContainer, toast } from 'react-toastify';
+import { ToastContainer, Zoom, toast } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 
 
@@ -34,7 +34,7 @@ const ShopingCart = () => {
     }, { totalPrice: 0, totalQuantity: 0 })
 
     let handleCheckOut = () => {
-        toast("Wow so easy!")
+        toast("Success!")
         setTimeout(() => {
             navigate("/checkout")
         }, 2000)
@@ -156,7 +156,7 @@ const ShopingCart = () => {
 
                     </div>
 
-                    <ToastContainer
+                    <ToastContainer className=" w-[100%] font-sans font-bold text-[30px] text-center"
                         position="top-center"
                         autoClose={5000}
                         hideProgressBar={false}
@@ -167,7 +167,7 @@ const ShopingCart = () => {
                         draggable
                         pauseOnHover
                         theme="light"
-
+                        transition={Zoom}
                     />
                 </div>
             </Container>
