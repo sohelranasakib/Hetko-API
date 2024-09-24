@@ -9,16 +9,17 @@ import { apiData } from '../components/ContextApi';
 import { FaCaretDown, FaCaretUp, FaStar } from "react-icons/fa";
 import { useDispatch } from 'react-redux';
 import { addToCart } from '../components/slice/productSlice';
+import { TiArrowSortedDown, TiArrowSortedUp } from "react-icons/ti";
 
 
 const PagesProduct = () => {
     let data = useContext(apiData)
     let [filterShow, setFilterShow] = useState([])
-   
+
     let [allshow, setAllShow] = useState(true)
 
     let [brandSearchFilter, setBrandSearchFilter] = useState([])
-    
+
     let dispatch = useDispatch()
 
     let [brandshow, setBrandShow] = useState(false)
@@ -29,7 +30,7 @@ const PagesProduct = () => {
 
     let [brand, setBrand] = useState([])
     let [category, setCategory] = useState([])
-    let [price, setPrice] = useState([])
+    // let [price, setPrice] = useState([])
     // let [discountPercentage, setDiscountPercentage] = useState([])
     // let [rating, setRating] = useState([])
 
@@ -43,9 +44,6 @@ const PagesProduct = () => {
         setCategory([...new Set(data.map((item) => item.category))])
     }, [data])
 
-    useEffect(() => {
-        setPrice([...new Set(data.map((item) => item.price))])
-    }, [data])
 
     // useEffect(() => {
     //     setDiscountPercentage([...new Set(data.map((item) => item.discountPercentage))])
@@ -93,16 +91,18 @@ const PagesProduct = () => {
 
     }
 
-    let handleShow = ()=>{
+    let handleShow = () => {
         setFilterShow(brandSearchFilter)
         setAllShow(false)
     }
-    
-    let handleHide = ()=>{
+
+    let handleHide = () => {
         let filterAmi = brandSearchFilter.slice(0, 4)
         setFilterShow(filterAmi)
         setAllShow(true)
     }
+
+    
 
     return (
         <section className=' lg:pt-[148px] pt-[173px] pb-[50px]'>
@@ -120,7 +120,7 @@ const PagesProduct = () => {
 
             <Container>
                 <div className="">
-                    <ProductsBar />
+                    <ProductsBar/>
                 </div>
                 <div className=" lg:flex">
                     <div className="lg:w-[20%] w-[100%]">
@@ -159,22 +159,29 @@ const PagesProduct = () => {
                                 </div>
                             }
                         </div>
-
                         <div className="">
-                            <div className="">
-                                <h2 onClick={() => setPriceShow(!priceshow)} className=' relative font-Sans font-bold text-[22px] text-[#0D0E43] after:absolute after:contain-[""] after:bottom-0 after:left-0 after:h-[3px] after:w-[150px] after:bg-[#fff] hover:after:bg-black flex items-center gap-[60px]'>Price Filter <p>{priceshow == true ? <FaCaretUp /> : <FaCaretDown />}</p></h2>
+                            <div className=" ">
+                                <h2 onClick={() => setPriceShow(!priceshow)} className='relative font-Sans font-bold text-[22px] text-[#0D0E43] after:absolute after:contain-[""] after:bottom-0 after:left-0 after:h-[3px] after:w-[50px] after:bg-[#fff] hover:after:bg-black  flex items-center gap-[113px]'>Price {priceshow == true ? <TiArrowSortedUp  /> : <TiArrowSortedDown  />}</h2>
+
                             </div>
                             {priceshow &&
-                                <div className="mt-[10px] overflow-y-scroll lg:h-[300px] h-[100px] ">
-                                    {price.map((item) => (
-                                        <div onClick={() => handlePrice(item)} className=' flex items-center gap-2 py-1'>
-                                            <input type="radio" name='yes' />
-                                            <p className="font-Sans font-semibold text-[16px] text-[#0D0E43] relative after:absolute after:contain-[''] after:bottom-[0px] after:left-0 after:h-[2px] after:w-[100%] after:bg-[#fff] hover:after:bg-black capitalize ">${item}</p>
-                                        </div>
 
-                                    ))}
-                                </div>
+                                <ul className='overflow-y-scroll lg:h-[300px] h-[100px]  '>
+
+
+                                    <li onClick={()=>handlePrice({low:0 , high:10})} className=' relative font-sans font-semibold   lg:text-[16px] text-[10px]  text-[#262626] lg:mb-[10px] mb-[4px] lg:py-[10px] lg:w-[40%]  hover:bg-[#262626] hover:text-[#fff] rounded-lg after:absolute after:content-[""] after:h-[1px] after:w-[100%] after:bg-[#D8D8D8] after:left-0 after:bottom-0 cursor-pointer duration-700 ease-in-out'>0$ - 10$</li>
+                                    <li onClick={()=>handlePrice({low:10 , high:20})} className=' relative font-sans font-semibold   lg:text-[16px] text-[10px]  text-[#262626] lg:mb-[10px] mb-[4px] lg:py-[10px] lg:w-[40%]  hover:bg-[#262626] hover:text-[#fff] rounded-lg after:absolute after:content-[""] after:h-[1px] after:w-[100%] after:bg-[#D8D8D8] after:left-0 after:bottom-0 cursor-pointer duration-700 ease-in-out'>10$ - 20$</li>
+                                    <li onClick={()=>handlePrice({low:20 , high:50})} className=' relative font-sans font-semibold  lg:text-[16px] text-[10px]  text-[#262626] lg:mb-[10px] mb-[4px] lg:py-[10px] lg:w-[40%]  hover:bg-[#262626] hover:text-[#fff] rounded-lg after:absolute after:content-[""] after:h-[1px] after:w-[100%] after:bg-[#D8D8D8] after:left-0 after:bottom-0 cursor-pointer duration-700 ease-in-out'>20$ - 50$</li>
+                                    <li onClick={()=>handlePrice({low:50 , high:100})} className=' relative font-sans font-semibold  lg:text-[16px] text-[10px]  text-[#262626] lg:mb-[10px] mb-[4px] lg:py-[10px] lg:w-[40%]  hover:bg-[#262626] hover:text-[#fff] rounded-lg after:absolute after:content-[""] after:h-[1px] after:w-[100%] after:bg-[#D8D8D8] after:left-0 after:bottom-0 cursor-pointer duration-700 ease-in-out'>50$ - 100$</li>
+                                    <li onClick={()=>handlePrice({low:100 , high:500})} className=' relative font-sans font-semibold  lg:text-[16px] text-[10px]  text-[#262626] lg:mb-[10px] mb-[4px] lg:py-[10px] lg:w-[40%]  hover:bg-[#262626] hover:text-[#fff] rounded-lg after:absolute after:content-[""] after:h-[1px] after:w-[100%] after:bg-[#D8D8D8] after:left-0 after:bottom-0 cursor-pointer duration-700 ease-in-out'>100$ - 500$</li>
+                                    <li onClick={()=>handlePrice({low:500 , high:1000})} className=' relative font-sans font-semibold  lg:text-[16px] text-[10px]  text-[#262626] lg:mb-[10px] mb-[4px] lg:py-[10px] lg:w-[40%]  hover:bg-[#262626] hover:text-[#fff] rounded-lg after:absolute after:content-[""] after:h-[1px] after:w-[100%] after:bg-[#D8D8D8] after:left-0 after:bottom-0 cursor-pointer duration-700 ease-in-out'>500$ - 1000$</li>
+                                    <li onClick={()=>handlePrice({low:1000 , high:2000})} className=' relative font-sans font-semibold  lg:text-[14px] text-[10px]  text-[#262626] lg:mb-[10px] mb-[4px] lg:py-[10px] lg:w-[40%]  hover:bg-[#262626] hover:text-[#fff] rounded-lg after:absolute after:content-[""] after:h-[1px] after:w-[100%] after:bg-[#D8D8D8] after:left-0 after:bottom-0 cursor-pointer duration-700 ease-in-out'>1000$ - 2000$</li>
+                                    <li onClick={()=>handlePrice({low:2000 , high:4000})} className=' relative font-sans font-semibold  lg:text-[14px] text-[10px]  text-[#262626] lg:mb-[10px] mb-[4px] lg:py-[10px] lg:w-[40%]  hover:bg-[#262626] hover:text-[#fff] rounded-lg after:absolute after:content-[""] after:h-[1px] after:w-[100%] after:bg-[#D8D8D8] after:left-0 after:bottom-0 cursor-pointer duration-700 ease-in-out'>2000$ - 4000$</li>
+
+
+                                </ul>
                             }
+
                         </div>
 
                         {/* <div className=" py-5">

@@ -97,9 +97,9 @@ const Products = () => {
                        <div onClick={()=>setMultiList("")} className={`h-[42px] w-[40px] text-[35px] ${ multiList == "activeList" ? "bg-white " : "bg-black text-white"} border-[1px] border-[#737373]  `}>
                             <PiSquaresFourFill />
                         </div>
-                        <Link to="/pagesproduct" onClick={handleList} className={`h-[42px] w-[40px] text-[35px]  ${ multiList == "activeList" ? "bg-black text-white" : "bg-white"} border-[1px] border-[#737373]`}>
+                        <h3 onClick={handleList} className={`h-[42px] w-[40px] text-[35px]  ${ multiList == "activeList" ? "bg-black text-white" : "bg-white"} border-[1px] border-[#737373]`}>
                             <GrSort/>
-                        </Link>
+                        </h3>
                        </div>
                     </div>
 
@@ -111,7 +111,7 @@ const Products = () => {
           <div className="w-[10%]"></div>
           <div className="w-[90%] items-center">
             
-              <Post allData={allData} />
+              <Post allData={allData} multiList={multiList}/>
 
             <div className=" text-end">
               <PaginationArea pageNumber={pageNumber} paginate={paginate} currentPage={currentPage} next={next} prev={prev} />

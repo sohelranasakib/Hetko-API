@@ -7,9 +7,8 @@ const ProductsBar = () => {
     let [multiList, setMultiList] = useState('')
 
     let handleList = ()=>{
-        setMultiList("activeList");
-        
-      }
+        setMultiList("activeList")
+    }
   return (
     <div className="lg:flex mt-[10px] bg-[#fff] py-[30px] px-[40px]">
                 <div className="lg:w-[40%] w-full">
@@ -32,9 +31,9 @@ const ProductsBar = () => {
                     <div className="lg:w-[50%] w-full flex items-center pl-[100px]">
                         <h4 className='font-Sans font-semibold text-[16px] text-[#0D0E43] lg:ml-[10px]'>View: </h4>
                         <div className=" flex gap-x-5 pl-[20px] ">
-                       <Link to="/product" onClick={()=>setMultiList("")} className={`h-[42px] w-[40px] text-[35px] ${ multiList == "activeList" ? "bg-white " : "bg-black text-white"} border-[1px] border-[#737373]  `}>
+                       <h3 onClick={()=>setMultiList("")} className={`h-[42px] w-[40px] text-[35px] ${ multiList == "activeList" ? "bg-white " : "bg-black text-white"} border-[1px] border-[#737373]  `}>
                             <PiSquaresFourFill />
-                        </Link>
+                        </h3>
                         <div onClick={handleList} className={`h-[42px] w-[40px] text-[35px]  ${ multiList == "activeList" ? "bg-black text-white" : "bg-white"} border-[1px] border-[#737373]`}>
                             <GrSort/>
                         </div>

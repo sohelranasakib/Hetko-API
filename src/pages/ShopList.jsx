@@ -12,6 +12,7 @@ import { useDispatch } from 'react-redux';
 import { addToCart } from '../components/slice/productSlice';
 import ProductsBar from '../components/ProductsBar';
 
+
 const ShopList = () => {
     let data = useContext(apiData)
 
@@ -75,7 +76,6 @@ const ShopList = () => {
 
             <Container>
                 <div className="">
-                    {/* <ProductsBar /> */}
                 <div className="lg:flex mt-[10px] bg-[#fff] py-[30px] px-[40px]">
                         <div className="lg:w-[40%] w-full">
                             <h2 className='font-Sans font-bold text-[22px] text-[#0D0E43]'>Ecommerce Acceories & Fashion item </h2>
@@ -98,10 +98,10 @@ const ShopList = () => {
                                 <h4 className='font-Sans font-semibold text-[16px] text-[#0D0E43] lg:ml-[10px]'>View: </h4>
 
                                 <div className=" flex gap-x-5 pl-[20px] ">
-                                    <div onClick={() => setMultiList("")} className={`h-[42px] w-[40px] text-[35px] ${multiList == "activeList" ? "bg-white " : "bg-black text-white"} border-[1px] border-[#737373]  `}>
+                                    <div onClick={handleList} className={`h-[42px] w-[40px] text-[35px] ${multiList == "activeList" ? "bg-black text-white" : "bg-white"} border-[1px] border-[#737373] `}>
                                         <PiSquaresFourFill />
                                     </div>
-                                    <div  onClick={handleList} className={`h-[42px] w-[40px] text-[35px]  ${multiList == "activeList" ? "bg-black text-white" : "bg-white"} border-[1px] border-[#737373]`}>
+                                    <div onClick={() => setMultiList("")} className={`h-[42px] w-[40px] text-[35px] ${multiList == "activeList" ? "bg-white " : "bg-black text-white"} border-[1px] border-[#737373]`}>
                                         <GrSort />
                                     </div>
                                 </div>
@@ -113,8 +113,10 @@ const ShopList = () => {
                     </div>
                 </div>
 
-                <div className=" lg:w-[70%] w-[100%]">
-                    {productShow.map((item) => (
+                <div className=" ">
+                <div className={`${multiList == "activeList" ? "flex": "lg:w-[70%] w-[100%]"}`}>
+                  {productShow.map((item) => (
+                   
                         <div className=" flex gap-x-10 py-[10px]">
                             <div className="lg:w-[40%] w-full">
                                 <div className=" relative group">
@@ -155,7 +157,9 @@ const ShopList = () => {
 
                             </div>
                         </div>
+                       
                     ))}
+                 </div>
                     {allShow ? data.length > 4 &&
                       <button onClick={handleShow} className=' font-sans font-bold text-[18px] px-[20px] py-[10px] border-2 hover:bg-[#262626] hover:text-[#fff] rounded-lg duration-500 ease-in-out'>Show All</button>
                     :
